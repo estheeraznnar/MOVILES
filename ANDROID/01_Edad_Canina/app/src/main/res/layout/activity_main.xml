@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--match_parente en width: Ocupa el ancho completo
+              " "     en height: ocupa el largo completo
+         wrap_content en height: ocupa lo suficiente para el tamaño de la imagen
+         adjustViewBounds: -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/perro"
+        android:adjustViewBounds="true"
+        />
+
+    <!--Tanto size como pading tiene que ir en dp-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/texto_principal"
+        />
+
+    <!--ImputType es el tipo de texto que quieras sino se pone el por defecto
+        marginHorizontal: no es igual que padin ya que deja el tamaño a ambos lados-->
+    <EditText
+        android:id="@+id/etEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/introduce_tu_edad"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginHorizontal="24dp"
+        android:padding="16dp"
+        />
+
+    <!--marginVertical: deja el tamaño que digas por arriba y por abajo
+        en layout_widthy en layout_height tambien se puede poner los dp que queramos
+        backgroundTint. color del boton-->
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="16dp"
+        android:backgroundTint="#549557"
+        android:text="@string/calcular"
+        />
+
+    <!--si ponemos tools en vez de android es que se vea una vez cuando se pulse le boton-->
+    <TextView
+        android:id="@+id/tvRespuesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Si fueras un perro, tendrias 47 años"
+        android:layout_marginHorizontal="24dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        />
+
+</LinearLayout>
