@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MI CALCULADORA</string>
+    <string name="mi_calculadora">Mi Calculadora</string>
+    <string name="bienbenida">Bienvenidos a mi APP Calculadora</string>
+    <string name="pedir_n1">Introduzca el primer numero:</string>
+    <string name="pedir_n2">Introduzca el segundo numero:</string>
+    <string name="n1">Número 1</string>
+    <string name="n2">Número 2</string>
+    <string name="suma">Suma (+)</string>
+    <string name="resta">Resta (-)</string>
+    <string name="multiplicacion">Multiplicacion (x)</string>
+    <string name="division">Division (/)</string>
+    <string name="instruccion_resultado">El resultado de la operacion es: </string>
+    <string name="resultado_suma">La suma de %d + %d es %d</string>
+    <string name="res_resta">La resta de %d - %d es %d</string>
+    <string name="res_multi">La multiplicacion de %d x %d es %d</string>
+    <string name="res_div">La division de %d / %d es %d</string>
+    <string name="toastText">Debes introducir un valor numerico antes de hacer la operación.</string>
+    <string name="toastError">El segundo numero debe de ser mas pequeño que el primero numero</string>
+</resources>
+

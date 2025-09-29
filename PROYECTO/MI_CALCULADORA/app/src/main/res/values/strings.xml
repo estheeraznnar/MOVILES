@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MY CALCULATOR</string>
+    <string name="mi_calculadora">My Calculator</string>
+    <string name="bienbenida">Welcome to my Calculator APP</string>
+    <string name="pedir_n1">Enter the first number:</string>
+    <string name="pedir_n2">Enter the second number:</string>
+    <string name="n1">Number 1</string>
+    <string name="n2">Number 2</string>
+    <string name="suma">Addition (+)</string>
+    <string name="resta">Subtraction (-)</string>
+    <string name="multiplicacion">Multiplication (x)</string>
+    <string name="division">Division (/)</string>
+    <string name="instruccion_resultado">The result of the operation is: </string>
+    <string name="resultado_suma">The sum of %d + %d is %d</string>
+    <string name="res_resta">The subtraction of %d - %d is %d</string>
+    <string name="res_multi">The multiplication of %d x %d is %d</string>
+    <string name="res_div">The division of %d / %d is %d</string>
+    <string name="toastText">You must enter a numerical value before performing the operation.</string>
+    <string name="toastError">The second number must be smaller than the first number.</string>
+</resources>
