@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    //5. añadimos el plugin paralize
+    id("kotlin-parcelize")
 }
 
 android {
