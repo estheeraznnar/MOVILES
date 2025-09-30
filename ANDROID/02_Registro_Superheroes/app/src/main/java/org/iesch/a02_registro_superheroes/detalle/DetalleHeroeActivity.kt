@@ -12,7 +12,8 @@ import org.iesch.a02_registro_superheroes.model.SuperHeroe
 class DetalleHeroeActivity : AppCompatActivity() {
     //3. Para no cometer equivocaciones en las kays, me creo un camanion object
     // Un companion object es un objeto que pertenece a una clase de Kotlin y permite definir miembros estaticos
-    companion object{
+    companion object
+    {
         const val HERO_NAME = "heroName"
         const val ALTER_EGO = "alterEgo"
         const val BIO = "bio"

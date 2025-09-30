@@ -59,7 +59,7 @@ class RegisterActivity : AppCompatActivity() {
             openCamera()
         }
     }
-    
+
     private fun openCamera() {
         //11. Abrimos la camara llamando al getcontent launch
         getContent.launch(null)
