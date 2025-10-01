@@ -1,5 +1,7 @@
 package org.iesch.a02_registro_superheroes.detalle
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +22,7 @@ class DetalleHeroeActivity : AppCompatActivity() {
         const val POWER = "power"
 
         const val superHeroe_KEY = "super_heroe"
+        const val FOTO_KEY = "foto"
     }
 
     private lateinit var binding: ActivityDetalleHeroeBinding
@@ -33,6 +36,7 @@ class DetalleHeroeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val bundle = intent.extras!!
 
         //8. Recibimos el objeto superHeroe del intent
         val superHeroe = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU){
@@ -42,6 +46,10 @@ class DetalleHeroeActivity : AppCompatActivity() {
             @Suppress("DEPRECATION")
             intent.getParcelableExtra<SuperHeroe>(superHeroe_KEY)
         }
+        //val bitmap = bundle.getParcelable<Bitmap>(FOTO_KEY)!!
+        //08- Eliminamos el Bitmap y obtenemos el String del directorio de ese bitmap
+        val bitmapDirectiory = bundle.getString(FOTO_KEY)
+        val bitmap = BitmapFactory.decodeFile(bitmapDirectiory)
 
         //1. Recibimos los objetos del itent
         //Un objeto es un contenedor de datos que permite almacenar y transportar multiples valores en Actividades o Fragmentos
@@ -56,7 +64,11 @@ class DetalleHeroeActivity : AppCompatActivity() {
         binding.tvAlterEgoResult.text = superHeroe?.alterEgo ?: "No hay alter ego"
         binding.tvBioResult.text = superHeroe?.bio ?: "No hay bio"
         binding.rbResultado.rating = superHeroe?.power ?: 0f
-            
+
+        if (bitmap != null){
+            binding.imageView.setImageBitmap(bitmap)
+        }
+
     }
 
 }
