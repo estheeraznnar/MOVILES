@@ -10,6 +10,7 @@ import org.iesch.mi_calculadora.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    //Inicializo el ViewBinding para acceder a los elementos de layout
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,72 +25,94 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        //Acciono el boton de la suma
         binding.suma.setOnClickListener {
 
+            //Cojo los nombres del texto y los paso a String
             val n1 = binding.n1.text.toString()
             val n2 = binding.n2.text.toString()
 
+            //Verifico si los dos campos tienen valor
             if (n1.isEmpty() || n2.isEmpty()){
                 Toast.makeText(this, R.string.toastText, Toast.LENGTH_LONG).show()
             }else{
-                val num1 = n1.toInt()
-                val num2 = n2.toInt()
+                //Convierto los valores del texto a Double para que admita decimales
+                val num1 = n1.toDouble()
+                val num2 = n2.toDouble()
                 val suma = num1 + num2
+                //Hago el mensaje usando el string con formato decimal
                 val res = getString(R.string.resultado_suma, num1, num2, suma)
-                binding.resultado.text=res
+                binding.resultado.text=res //muestro el resultado
             }
 
         }
 
+        //Acciono el boton de la resta
         binding.resta.setOnClickListener {
 
+            //Cojo los nombres del texto y los paso a String
             val n1 = binding.n1.text.toString()
             val n2 = binding.n2.text.toString()
 
+            //Verifico si los dos campos tienen valor
             if (n1.isEmpty() || n2.isEmpty()){
                 Toast.makeText(this, R.string.toastText, Toast.LENGTH_LONG).show()
             }else{
-                val num1 = n1.toInt()
-                val num2 = n2.toInt()
+                //Convierto los valores del texto a Double para que admita decimales
+                val num1 = n1.toDouble()
+                val num2 = n2.toDouble()
                 val resta = num1 - num2
+                //Hago el mensaje usando el string con formato decimal
                 val res = getString(R.string.res_resta, num1, num2, resta)
-                binding.resultado.text=res
+                binding.resultado.text=res//muestro el resultado
             }
 
         }
 
+        //Acciono el boton de la division
         binding.division.setOnClickListener {
 
+            //Cojo los nombres del texto y los paso a String
             val n1 = binding.n1.text.toString()
             val n2 = binding.n2.text.toString()
 
+            //Verifico si los dos campos tienen valor
             if (n1.isEmpty() || n2.isEmpty()){
                 Toast.makeText(this, R.string.toastText, Toast.LENGTH_LONG).show()
-            }else if (n1 < n2){
+
+            //Compruebo que el segundo numero no sea 0 para evitar la division por cero
+            }else if (n2.toDouble() == 0.0){
                 Toast.makeText(this, R.string.toastError, Toast.LENGTH_LONG).show()
             }else{
-                val num1 = n1.toInt()
-                val num2 = n2.toInt()
+                //Convierto los valores del texto a Double para que admita decimales
+                val num1 = n1.toDouble()
+                val num2 = n2.toDouble()
                 val division = num1 / num2
+                //Hago el mensaje usando el string con formato decimal
                 val res = getString(R.string.res_div, num1, num2, division)
-                binding.resultado.text=res
+                binding.resultado.text=res//muestro el resultado
             }
 
         }
 
+        //Acciono el boton de multiplicacion
         binding.multiplicacion.setOnClickListener {
 
+            //Cojo los nombres del texto y los paso a String
             val n1 = binding.n1.text.toString()
             val n2 = binding.n2.text.toString()
 
+            //Verifico si los dos campos tienen valor
             if (n1.isEmpty() || n2.isEmpty()){
                 Toast.makeText(this, R.string.toastText, Toast.LENGTH_LONG).show()
             }else{
-                val num1 = n1.toInt()
-                val num2 = n2.toInt()
+                //Convierto los valores del texto a Double para que admita decimales
+                val num1 = n1.toDouble()
+                val num2 = n2.toDouble()
                 val multiplicacion = num1 * num2
+                //Hago el mensaje usando el string con formato decimal
                 val res = getString(R.string.res_multi, num1, num2, multiplicacion)
-                binding.resultado.text=res
+                binding.resultado.text=res //muestro el resultado
             }
 
         }

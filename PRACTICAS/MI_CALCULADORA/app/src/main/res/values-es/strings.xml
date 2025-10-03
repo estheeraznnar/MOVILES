@@ -12,11 +12,13 @@
     <string name="multiplicacion">Multiplicacion (x)</string>
     <string name="division">Division (/)</string>
     <string name="instruccion_resultado">El resultado de la operacion es: </string>
-    <string name="resultado_suma">La suma de %d + %d es %d</string>
-    <string name="res_resta">La resta de %d - %d es %d</string>
-    <string name="res_multi">La multiplicacion de %d x %d es %d</string>
-    <string name="res_div">La division de %d / %d es %d</string>
+    <!--Utilizo el %.2f para que me permita utilizar decimales y le pongo el .2 para que
+    me coja dos decimales-->
+    <string name="resultado_suma">La suma de %.2f + %.2f es %.2f</string>
+    <string name="res_resta">La resta de %.2f - %.2f es %.2f</string>
+    <string name="res_multi">La multiplicacion de %.2f x %.2f es %.2f</string>
+    <string name="res_div">La division de %.2f / %.2f es %.2f</string>
     <string name="toastText">Debes introducir un valor numerico antes de hacer la operación.</string>
-    <string name="toastError">El segundo numero debe de ser mas pequeño que el primero numero</string>
+    <string name="toastError">El segundo numero no puede ser cero</string>
 </resources>
 
