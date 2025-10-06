@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">REGISTRO</string>
+    <string name="toastText">Debes rellenar todos los campos</string>
+    <string name="iniciarSesion">INICIAR SESION</string>
+    <string name="textEmail">Correo</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="boton">Enviar</string>
+    <string name="Home">COMPONENTES</string>
+    <string name="bienvenida">Bienvenido: %s</string>
+
+</resources>

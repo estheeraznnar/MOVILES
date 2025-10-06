@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">REGISTER</string>
+    <string name="toastText">You must fill in all fields</string>
+    <string name="iniciarSesion">LOGIN</string>
+    <string name="textEmail">Email</string>
+    <string name="contraseña">Password</string>
+    <string name="boton">Send</string>
+    <string name="Home">COMPONENTS</string>
+    <string name="bienvenida">Welcome: %s</string>
+
+</resources>
