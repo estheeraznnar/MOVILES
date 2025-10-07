@@ -77,7 +77,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginTop="16dp"
-                android:text="PMDM Curso 25 26" />
+                android:text="PMDM IES CHOMON" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,7 +101,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/btn_1" />
+                        app:srcCompat="@drawable/Perro" />
 
                     <ImageView
                         android:id="@+id/ic_trans_etiqueta"
@@ -285,17 +285,26 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:background="@drawable/banner_background">
+                android:background="@drawable/list_background1">
 
                 <ImageView
-                    android:id="@+id/ic_AI"
+                    android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/bg_1" />
+
+                <ImageView
+                    android:id="@+id/ic_calc"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
                     android:layout_marginEnd="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_1" />
+                    app:srcCompat="@drawable/calculadora" />
 
                 <TextView
                     android:id="@+id/tv_practica1"
@@ -305,7 +314,7 @@
                     android:layout_marginTop="16dp"
                     android:text="Practica 1"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -317,6 +326,49 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:text="Mi Calculadora en Kotlin"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_2"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/ic_quizzes"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/pregunta" />
+
+                <TextView
+                    android:id="@+id/tv_practica2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Practica 2"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_practica2_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="App Quizzes"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
