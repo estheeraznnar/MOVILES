@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrincipalActivity">
+
+    <TextView
+        android:id="@+id/quizz"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/azulVerdoso"
+        android:gravity="center"
+        android:text="QUIZZ"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txNumPreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/numero_preguta"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/quizz"
+        app:layout_constraintStart_toStartOf="@+id/quizz"
+        app:layout_constraintTop_toBottomOf="@+id/quizz" />
+
+    <TextView
+        android:id="@+id/txPregunta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/titulo_pregunta"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/quizz"
+        app:layout_constraintStart_toStartOf="@+id/quizz"
+        app:layout_constraintTop_toBottomOf="@id/txNumPreg" />
+
+    <TextView
+        android:id="@+id/separacor"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="45dp"
+        android:background="@color/azulVerdoso2"
+        app:layout_constraintTop_toBottomOf="@+id/txPregunta"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="@+id/quizz"
+        app:layout_constraintStart_toStartOf="@+id/quizz"
+        app:layout_constraintTop_toBottomOf="@+id/separacor">
+
+        <RadioButton
+            android:id="@+id/rbOpcion1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:text="@string/opcion_1" />
+
+        <RadioButton
+            android:id="@+id/rbOpcion2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:text="@string/opcion_2" />
+
+        <RadioButton
+            android:id="@+id/rbOpcion3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:text="@string/opcion_3" />
+
+        <RadioButton
+            android:id="@+id/rbOpcion4"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:text="@string/opcion_4" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnenviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/gris"
+        android:text="@string/boton_enviar"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

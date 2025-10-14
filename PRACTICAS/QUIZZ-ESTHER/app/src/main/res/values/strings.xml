@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Quizz App</string>
+    <string name="numero_preguta">Question %d</string>
+    <string name="numero_pregunata_format">Question %d</string>
+    <string name="titulo_pregunta">Question title</string>
+    <string name="opcion_1">Option 1</string>
+    <string name="opcion_2">Option 2</string>
+    <string name="opcion_3">Option 3</string>
+    <string name="opcion_4">Option 4</string>
+    <string name="boton_enviar">Submit</string>
+    <string name="boton_siguiente">Next</string>
+    <string name="fin">Finish</string>
+    <string name="ninguna_respuesta_seleccionada">Please select an answer</string>
+    <string name="respuesta_correcta">Correct!</string>
+    <string name="respuesta_incorrecta">Incorrect</string>
+    <string name="final_quizz">You got %d out of %d questions correct</string>
+
+    <!--Preguntas-->
+    <string name="preg1">Who founded Apple?</string>
+    <string name="preg2">What is Kotlin?</string>
+    <string name="res1">A framework</string>
+    <string name="res2">An operating system</string>
+    <string name="res3">A programming language</string>
+    <string name="res4">A database</string>
+    <string name="preg3">What is 7 x 8?</string>
+    <string name="preg4">What is Git?</string>
+    <string name="res5">A programming language</string>
+    <string name="res6">A version control system</string>
+    <string name="res7">An operating system</string>
+    <string name="res8">A web server</string>
+    <string name="preg5">Which is the most used operating system on servers?</string>
+</resources>
