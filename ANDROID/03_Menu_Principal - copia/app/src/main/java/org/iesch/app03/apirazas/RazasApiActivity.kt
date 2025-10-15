@@ -1,6 +1,7 @@
 package org.iesch.app03.apirazas
 
 import android.os.Bundle
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -95,13 +96,11 @@ class RazasApiActivity : AppCompatActivity(), SearchView.OnQueryTextListener{
 
                     showError()
                 }
-
-
-
+                hiddenKeyBoard()
             }
-
         }
     }
+
 
     private fun showError() {
         Toast.makeText(this, "Ha ocurrido un error", Toast.LENGTH_LONG).show()
@@ -122,5 +121,10 @@ class RazasApiActivity : AppCompatActivity(), SearchView.OnQueryTextListener{
 
     }
 
+    private fun hiddenKeyBoard() {
+        //Ocultamos el teclado
+        val imn = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imn.hideSoftInputFromWindow(binding.main.windowToken, 0)
+    }
 
 }

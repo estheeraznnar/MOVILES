@@ -15,7 +15,7 @@
         android:theme="@style/Theme._03_Menu_Principal">
         <activity
             android:name=".apirazas.RazasApiActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".MenuActivity"
             android:exported="true">
