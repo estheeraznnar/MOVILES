@@ -13,5 +13,6 @@ interface APIService {
     //4 - Esta funcion recibira por parametro algo, una direccion + home/images,
     //y devolvera un objeto de tipo DogsResponse
     @GET
-    fun getPerrosPorRaza( @Url url: String ) : Response<DogsResponse>
+    //Pongo que sea funcion suspend para que se quede esperando a esperar el resultado y no pete ya que no va al instante
+    suspend fun getPerrosPorRaza( @Url url: String ) : Response<DogsResponse>
 }

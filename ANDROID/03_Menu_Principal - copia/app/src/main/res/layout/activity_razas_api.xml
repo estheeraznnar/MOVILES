@@ -8,7 +8,7 @@
     tools:context=".apirazas.RazasApiActivity">
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/avDog"
+        android:id="@+id/svDog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +24,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/avDog" />
+        app:layout_constraintTop_toBottomOf="@+id/svDog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
