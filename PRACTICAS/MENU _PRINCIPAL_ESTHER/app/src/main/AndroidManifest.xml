@@ -29,10 +29,7 @@
             android:name=".calculadora.CalculadoraActivity"
             android:exported="false" />
         <activity
-            android:name=".login.HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".login.LoginActivity"
+            android:name=".MenuActivity"
             android:exported="false" />
         <activity
             android:name=".edad_canina.EdadcaninaActivity"
@@ -40,12 +37,11 @@
         <activity
             android:name=".apirazas.RazasApiActivity"
             android:exported="false" />
-        <activity
-            android:name=".MenuActivity"
+        <!-- La actividad de login será la que inicia la App -->
+        <activity android:name=".login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

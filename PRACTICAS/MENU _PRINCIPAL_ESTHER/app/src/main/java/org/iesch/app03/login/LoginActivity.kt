@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.iesch.app03.MenuActivity
 import org.iesch.app03.R
 import org.iesch.app03.databinding.ActivityLoginBinding
 
@@ -35,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
             //Valido que ambos campos no esten vacios antes de continuar
             if (correo.isNotEmpty() && contraseña.isNotEmpty()){
                 //Creo un Intet para ir a HomeActivity y le paso el correo por un extra
-                val intent = Intent(this, HomeActivity::class.java)
+                val intent = Intent(this, MenuActivity::class.java)
                 intent.putExtra("correo_usuario", correo) //Clave "correo_usuario"
                 startActivity(intent) //Inicio la pantalla de HomeActivity
             }else{

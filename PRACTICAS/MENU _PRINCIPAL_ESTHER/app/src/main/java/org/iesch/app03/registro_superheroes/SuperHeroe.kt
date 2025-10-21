@@ -1,6 +1,7 @@
 package org.iesch.app03.registro_superheroes
 
 import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 // 6 - Me creo el objeto SuperHeroe y lo hago parcelizable
 @Parcelize
