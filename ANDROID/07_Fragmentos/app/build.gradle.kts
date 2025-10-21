@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+    //1- me cargo la libreria fragments
+    implementation("androidx.fragment:fragment-ktx:1.8.9")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

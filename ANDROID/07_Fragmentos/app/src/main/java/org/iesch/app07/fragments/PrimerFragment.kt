@@ -1,24 +1,28 @@
 package org.iesch.app07.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import org.iesch.app07.R
-private const val NAME_BUNDLE = "name_bundle"
-private const val ADRESS_BUNDLE = "adress_bundle"
+import kotlin.math.log
+
+const val NAME_BUNDLE = "name_bundle"
+ const val ADRESS_BUNDLE = "adress_bundle"
 class PrimerFragment : Fragment() {
-    private var param1: String? = null
-    private var param2: String? = null
+    private var nombre: String? = null
+    private var direccion: String? = null
 
     //Este metodo se llama cuando la vista ha sido cargada
     //cuando llamamos a la instancia  llegamos a onCreate y aqui le preguntamos si hay algun argumento
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(NAME_BUNDLE)
-            param2 = it.getString(ADRESS_BUNDLE)
+            nombre = it.getString(NAME_BUNDLE)
+            direccion = it.getString(ADRESS_BUNDLE)
+            Log.i("nombre", nombre.orEmpty())
         }
     }
 
