@@ -3,4 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="bg_home_fragments">#ABEF99</color>
+    <color name="bg_porfile_fragments">#F88CEE</color>
+    <color name="bg_settings_fragments">#66B3FA</color>
+    <color name="bg_bottom_menu">#BC6FFD</color>
+
 </resources>
