@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._03_Menu_Principal">
         <activity
+            android:name=".settings.SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".fragments.FragmentsActivity"
             android:exported="false" />
         <activity

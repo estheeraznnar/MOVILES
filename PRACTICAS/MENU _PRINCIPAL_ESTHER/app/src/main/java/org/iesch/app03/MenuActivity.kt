@@ -27,8 +27,8 @@ class MenuActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val email = intent.getStringExtra("email")
-        binding.tvBienvenida.text = "Hola, $email"
+        val correo = intent.getStringExtra("correo_usuario")
+        binding.tvBienvenida.text = "Hola, $correo"
 
         configurarMenu()
     }
@@ -56,6 +56,7 @@ class MenuActivity : AppCompatActivity() {
     private fun irSuperHeroes() {
         startActivity(Intent(this, RegisterActivity::class.java))
     }
+
 
     private fun irRazas() {
         startActivity(Intent(this, RazasApiActivity::class.java))

@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentActivity
 import org.iesch.app03.apirazas.RazasApiActivity
 import org.iesch.app03.databinding.ActivityMenuBinding
 import org.iesch.app03.fragments.FragmentsActivity
+import org.iesch.app03.settings.SettingsActivity
 
 class MenuActivity : AppCompatActivity() {
 
@@ -32,15 +33,23 @@ class MenuActivity : AppCompatActivity() {
         binding.btnFragments.setOnClickListener {
             irAFragments()
         }
+        binding.btnSettings.setOnClickListener {
+            irASettings()
+        }
+    }
+    private fun MenuActivity.irASettings() {
+        val irASettings = Intent(this, SettingsActivity::class.java)
+        startActivity(irASettings)
+    }
+
+    private fun MenuActivity.irAFragments() {
+        val irAFragments = Intent(this, FragmentsActivity::class.java)
+        startActivity(irAFragments)
+    }
+
+    private fun MenuActivity.irARazasActivity() {
+        val irARazas = Intent(this, RazasApiActivity::class.java)
+        startActivity(irARazas)
     }
 }
 
-private fun MenuActivity.irAFragments() {
-    val irAFragments = Intent(this, FragmentsActivity::class.java)
-    startActivity(irAFragments)
-}
-
-private fun MenuActivity.irARazasActivity() {
-    val irARazas = Intent(this, RazasApiActivity::class.java)
-    startActivity(irARazas)
-}

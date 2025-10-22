@@ -43,6 +43,7 @@ class LoginActivity : AppCompatActivity() {
                 //Muestro un mensaje de error si hay algun campo vacio
                 Toast.makeText(this, R.string.toastTextLogin, Toast.LENGTH_LONG).show()
             }
+            finish()
         }
     }
 }
