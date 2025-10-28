@@ -57,7 +57,6 @@ class MenuActivity : AppCompatActivity() {
         startActivity(Intent(this, RegisterActivity::class.java))
     }
 
-
     private fun irRazas() {
         startActivity(Intent(this, RazasApiActivity::class.java))
     }

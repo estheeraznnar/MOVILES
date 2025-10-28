@@ -12,6 +12,9 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.iesch.app03.R
 import org.iesch.app03.databinding.ActivitySettingsBinding
 //001- Me creo una funcion de extension
@@ -44,7 +47,11 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun initUI() {
         binding.rsVolumen.addOnChangeListener { _, value, _ ->
-            Log.i("esther", "Guardarndo valor de volumen: $value")
+            //Log.i("esther", "Guardarndo valor de volumen: $value")
+            CoroutineScope(Dispatchers.IO).launch {
+                saveVolumen(value.toInt()) //Para que esto funcione hay que meterlo en corrutine
+            }
+            //Con esto almacenamos el valor
         }
     }
 
@@ -52,9 +59,9 @@ class SettingsActivity : AppCompatActivity() {
     //funcion asincrona ya que le ponemos el suspend
     private suspend fun saveVolumen(value: Int){
         //Aqui ira el codigo para guardar datos en el DataStore
-        //No puede ser llamado desde fuera de una corutina
-        dataStore.edit {
-            it[intPreferencesKey(VOLUME_LEVEL)] = value
+        //No puede ser llamado desde fuera de una corrutina
+        dataStore.edit { preferences ->
+            preferences[intPreferencesKey(VOLUME_LEVEL)] = value
         }
     }
 }
