@@ -7,14 +7,14 @@
 
     <style name="Theme._03_Menu_Principal" parent="Base.Theme._03_Menu_Principal" />
 
-    <!-- Splash Screen Theme
-    <style name="Splash_Screen" parent="Theme.SplashScreen">
+    <!-- Splash Screen Theme -->
+    <style name="Theme._03_Menu_Principal.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/splash_background</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
-         duracion de la animacion
+        <!-- duracion de la animacion-->
         <item name="windowSplashScreenAnimationDuration">2000</item>
         <item name="postSplashScreenTheme">@style/Theme._03_Menu_Principal</item>
-    </style>-->
+    </style>
 
 
     <!-- Tema para Edad Canina -->

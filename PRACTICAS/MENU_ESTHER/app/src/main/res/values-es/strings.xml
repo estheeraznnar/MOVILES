@@ -67,4 +67,7 @@
     <string name="res7">Un sistema operativo</string>
     <string name="res8">Un servidor web</string>
     <string name="preg5">¿Cuál es el sistema operativo más usado en servidores?</string>
+
+    <!-- MApbox Token -->
+    <string name="mapbox_access_token">pk.eyJ1IjoiY2VxdWUiLCJhIjoiY2tkM3F4MzV1MHl4NjJ0bndzdWdmNWI5cSJ9._jBKVgTDTR2W1auJYOgiMg</string>
 </resources>

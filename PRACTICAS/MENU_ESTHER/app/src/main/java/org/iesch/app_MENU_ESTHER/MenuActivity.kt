@@ -13,6 +13,7 @@ import org.iesch.app_MENU_ESTHER.cine.ListaPeliculasActivity
 import org.iesch.app_MENU_ESTHER.databinding.ActivityMenuBinding
 import org.iesch.app_MENU_ESTHER.edadcanina.EdadCaninaActivity
 import org.iesch.app_MENU_ESTHER.fragments.FragmentsActivity
+import org.iesch.app_MENU_ESTHER.maps.MapasActivity
 import org.iesch.app_MENU_ESTHER.quizz.QuizzPrincipalActivity
 import org.iesch.app_MENU_ESTHER.settings.SettingsActivity
 import org.iesch.app_MENU_ESTHER.superheroes.RegistroSuperHeroeActivity
@@ -22,6 +23,7 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMenuBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityMenuBinding.inflate( layoutInflater )
@@ -48,6 +50,7 @@ class MenuActivity : AppCompatActivity() {
         binding.btnCine.setOnClickListener { irAPeliculas() }
         binding.btnSettings.setOnClickListener { irASettings() }
         binding.btnFragments.setOnClickListener { irAMenuFragments() }
+        binding.btnMapas.setOnClickListener { irAMapas() }
     }
 
     private fun irAPeliculas() {
@@ -91,6 +94,11 @@ class MenuActivity : AppCompatActivity() {
 
     }
 
+}
+
+private fun MenuActivity.irAMapas() {
+    val irAMapas = Intent(this, MapasActivity::class.java)
+    startActivity(irAMapas)
 }
 
 

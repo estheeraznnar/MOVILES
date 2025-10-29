@@ -64,4 +64,6 @@
     <string name="res7">An operating system</string>
     <string name="res8">A web server</string>
     <string name="preg5">Which is the most used operating system on servers?</string>
+    <!-- MApbox Token -->
+    <string name="mapbox_access_token">pk.eyJ1IjoiY2VxdWUiLCJhIjoiY2tkM3F4MzV1MHl4NjJ0bndzdWdmNWI5cSJ9._jBKVgTDTR2W1auJYOgiMg</string>
 </resources>

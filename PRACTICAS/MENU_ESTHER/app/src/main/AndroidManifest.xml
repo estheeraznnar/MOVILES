@@ -14,13 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._03_Menu_Principal">
         <activity
+            android:name=".maps.MapasActivity"
+            android:exported="false" />
+        <activity
             android:name=".quizz.QuizzResultadoActivity"
             android:exported="false" />
         <activity
             android:name=".quizz.QuizzPrincipalActivity"
             android:exported="false" />
         <activity
-            android:name=".login.LoginActivity"
+            android:name=".MenuActivity"
             android:exported="false" />
         <activity
             android:name=".calculadora.CalculadoraActivity"
@@ -34,11 +37,11 @@
         <activity
             android:name=".superheroes.detalle.DetalleHeroeActivity"
             android:exported="false"
-            android:theme="@style/Registro_SuperHeroes"/>
+            android:theme="@style/Registro_SuperHeroes" />
         <activity
             android:name=".superheroes.RegistroSuperHeroeActivity"
             android:exported="false"
-            android:theme="@style/Registro_SuperHeroes"/>
+            android:theme="@style/Registro_SuperHeroes" />
         <activity
             android:name=".edadcanina.EdadCaninaActivity"
             android:exported="false"
@@ -48,24 +51,21 @@
             android:exported="false" />
         <activity
             android:name=".apirazas.RazasApiActivity"
-            android:exported="false" />
-        <!-- La actividad de login será la que inicia la App -->
+            android:exported="false" /> <!-- La actividad de login será la que inicia la App -->
         <activity
-            android:name=".MenuActivity"
-
-            android:exported="true">
+            android:name=".login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme._03_Menu_Principal.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- 6 - Le damos permisos a nuestro provider-->
+        </activity> <!-- 6 - Le damos permisos a nuestro provider -->
         <!-- Un provider es un componente que permite compartir datos entre aplicaciones de manera segura -->
         <provider
-            android:authorities="${applicationId}.provider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
