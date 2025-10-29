@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="texto_principal">#FFFFFFFF</color>
+    <color name="texto_principal">#FF000000</color>
     <!-- Colores del menu-->
     <color name="menu_verde">#37C9BB</color>
     <color name="menu_naranja">#FF9D43</color>
@@ -11,7 +11,11 @@
     <color name="menu_verdeClaro">#92D398</color>
     <color name="menu_verdeOscuro">#055555</color>
     <color name="my_dark_primary">#E75719</color>
+    <color name="menu_morado">#B177F0</color>
+    <color name="menu_rojo">#FF5858</color>
 
+    <!--Color splash screem-->
+    <color name="splash_background">#FBE6DD</color>
 
 
     <color name="bg_home_fragments">#ABEF99</color>

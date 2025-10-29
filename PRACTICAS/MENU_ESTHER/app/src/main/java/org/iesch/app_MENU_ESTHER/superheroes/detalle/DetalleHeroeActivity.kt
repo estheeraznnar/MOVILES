@@ -36,6 +36,7 @@ class DetalleHeroeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        supportActionBar?.title = "Detalle SuperHeroe"
         val bundle = intent.extras!!
 
         val superHeroe = if ( android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {

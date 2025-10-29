@@ -7,12 +7,35 @@
 
     <style name="Theme._03_Menu_Principal" parent="Base.Theme._03_Menu_Principal" />
 
+    <!-- Splash Screen Theme
+    <style name="Splash_Screen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+         duracion de la animacion
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="postSplashScreenTheme">@style/Theme._03_Menu_Principal</item>
+    </style>-->
+
+
     <!-- Tema para Edad Canina -->
-    <style name="Edad_Canina" parent="Theme.Material3.DayNight" >
+    <style name="Edad_Canina" parent="Theme.AppCompat.DayNight.DarkActionBar" >
 
         <item name="colorPrimary">@color/menu_verde</item>
-        <item name="android:actionBarStyle">@color/menu_verde</item>
+        <item name="colorOnPrimary">@color/menu_verde</item>
+        <item name="colorAccent">@color/menu_verde</item>
+        <item name="colorButtonNormal">@color/menu_verde</item>
         <item name="statusBarBackground">@color/menu_verde</item>
+
+    </style>
+
+    <!--Tema para registro de superheroes-->
+    <style name="Registro_SuperHeroes" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/menu_naranja</item>
+        <item name="colorOnPrimary">@color/menu_naranja</item>
+        <item name="colorAccent">@color/menu_naranja</item>
+        <item name="colorButtonNormal">@color/menu_naranja</item>
+        <item name="statusBarBackground">@color/menu_naranja</item>
 
     </style>
 

@@ -22,6 +22,7 @@ class EdadCaninaActivity : AppCompatActivity() {
             insets
         }
 
+        supportActionBar?.title = "Edad Canina"
         // 1º - Tomamos el control de todos los elementos de la parte de la UI
         val resultText = findViewById<TextView>(R.id.tvRespuesta)
         val calculateButton = findViewById<Button>(R.id.btnCalcular)

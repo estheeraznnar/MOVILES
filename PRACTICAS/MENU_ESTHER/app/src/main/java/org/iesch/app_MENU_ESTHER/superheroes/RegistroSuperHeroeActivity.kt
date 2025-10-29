@@ -49,6 +49,8 @@ class RegistroSuperHeroeActivity : AppCompatActivity() {
             insets
         }
 
+        supportActionBar?.title = "Registro SuperHeroe"
+
         binding.btnGuardar.setOnClickListener {
 
             val superHeroName = binding.etHeroName.text.toString()
