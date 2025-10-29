@@ -1,0 +1,67 @@
+<resources>
+    <!--Edad Canina-->
+    <string name="app_name">MENU_PRINCIPAL_ESTHER</string>
+    <string name="texto_principal">How old are you?</string>
+    <string name="introduce_tu_edad">Your age?</string>
+    <string name="calcular">Calculate</string>
+    <string name="resulta_format">If you where a dog, you would be %d years old.</string>
+    <string name="toastTextEdad">You must enter a numeric value.</string>
+
+    <!--Login-->
+    <string name="toastTextLogin">You must fill in all fields</string>
+    <string name="iniciarSesion">LOGIN</string>
+    <string name="textEmail">Email</string>
+    <string name="contraseña">Password</string>
+    <string name="boton">Send</string>
+    <string name="Home">COMPONENTS</string>
+    <string name="bienvenida">Welcome: %s</string>
+
+    <!--Calculadora-->
+    <string name="mi_calculadora">My Calculator</string>
+    <string name="bienbenida">Welcome to my Calculator APP</string>
+    <string name="pedir_n1">Enter the first number:</string>
+    <string name="pedir_n2">Enter the second number:</string>
+    <string name="n1">Number 1</string>
+    <string name="n2">Number 2</string>
+    <string name="suma">Addition (+)</string>
+    <string name="resta">Subtraction (-)</string>
+    <string name="multiplicacion">Multiplication (x)</string>
+    <string name="division">Division (/)</string>
+    <string name="instruccion_resultado">The result of the operation is: </string>
+    <string name="resultado_suma">The sum of %.2f + %.2f is %.2f</string>
+    <string name="res_resta">The subtraction of %.2f - %.2f is %.2f</string>
+    <string name="res_multi">The multiplication of %.2f x %.2f is %.2f</string>
+    <string name="res_div">The division of %.2f / %.2f is %.2f</string>
+    <string name="toastText">You must enter a numerical value before performing the operation.</string>
+    <string name="toastError">The second number can not be zero</string>
+
+    <!--Quizz-->
+    <string name="numero_preguta">Question %d</string>
+    <string name="numero_pregunata_format">Question %d</string>
+    <string name="titulo_pregunta">Question title</string>
+    <string name="opcion_1">Option 1</string>
+    <string name="opcion_2">Option 2</string>
+    <string name="opcion_3">Option 3</string>
+    <string name="opcion_4">Option 4</string>
+    <string name="boton_enviar">Submit</string>
+    <string name="boton_siguiente">Next</string>
+    <string name="fin">Finish</string>
+    <string name="ninguna_respuesta_seleccionada">Please select an answer</string>
+    <string name="respuesta_correcta">Correct!</string>
+    <string name="respuesta_incorrecta">Incorrect</string>
+    <string name="final_quizz">You got %d out of %d questions correct</string>
+    <!--Preguntas-->
+    <string name="preg1">Who founded Apple?</string>
+    <string name="preg2">What is Kotlin?</string>
+    <string name="res1">A framework</string>
+    <string name="res2">An operating system</string>
+    <string name="res3">A programming language</string>
+    <string name="res4">A database</string>
+    <string name="preg3">What is 7 x 8?</string>
+    <string name="preg4">What is Git?</string>
+    <string name="res5">A programming language</string>
+    <string name="res6">A version control system</string>
+    <string name="res7">An operating system</string>
+    <string name="res8">A web server</string>
+    <string name="preg5">Which is the most used operating system on servers?</string>
+</resources>

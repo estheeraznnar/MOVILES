@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="texto_principal">#FFFFFFFF</color>
+    <!-- Colores del menu-->
+    <color name="menu_verde">#37C9BB</color>
+    <color name="menu_naranja">#FF9D43</color>
+    <color name="menu_rosa">#F36095</color>
+    <color name="menu_azul">#389EF2</color>
+    <color name="menu_verdeClaro">#92D398</color>
+    <color name="menu_verdeOscuro">#055555</color>
+    <color name="my_dark_primary">#E75719</color>
+
+
+
+    <color name="bg_home_fragments">#ABEF99</color>
+    <color name="bg_porfile_fragments">#F88CEE</color>
+    <color name="bg_settings_fragments">#66B3FA</color>
+    <color name="bg_bottom_menu">#BC6FFD</color>
+
+    <!--APLICACIONES-->
+    <color name="azulVerdoso">#85D4AB</color>
+    <color name="gris">#A4B3A9</color>
+    <color name="verde">#1F5B1F</color>
+    <color name="vereClaro">#508968</color>
+    <color name="azulVerdoso3">#739B86</color>
+    <color name="azulVerdoso2">#EF8B9E97</color>
+    <color name="gris2">#BFBFBF</color>
+    <color name="yellow">#FFEB3B</color>
+
+</resources>
