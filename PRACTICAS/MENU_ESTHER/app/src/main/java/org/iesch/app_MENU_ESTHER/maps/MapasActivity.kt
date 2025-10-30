@@ -1,9 +1,12 @@
 package org.iesch.app_MENU_ESTHER.maps
 
 import android.graphics.BitmapFactory
+import android.graphics.Canvas
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.createBitmap
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.mapbox.geojson.Point
@@ -32,8 +35,8 @@ class MapasActivity : AppCompatActivity() {
         }
         //Iniciamos el mapa
         mapView = binding.mapView
-        //inicializamos el Token
-        val mapboxToken = getString(R.string.mapbox_access_token)
+
+
         //Configuramos el mapa y el estilo del mapa
          mapView.mapboxMap.apply {
              //Cargamos el estilo del mapa
@@ -46,29 +49,27 @@ class MapasActivity : AppCompatActivity() {
                          .zoom(16.0)
                          .build()
                  )
+
+                 //Cargar y añadir la imagen del marcador al estilo
+                 val drawable = ContextCompat.getDrawable(this@MapasActivity, R.drawable.marcker_red)
+                 val bitmap = createBitmap(drawable!!.intrinsicWidth, drawable.intrinsicHeight)
+                 val canvas = Canvas(bitmap)
+                 drawable.setBounds(0, 0, canvas.width, canvas.height)
+                 drawable.draw(canvas)
+
+                 style.addImage("custom-marker", bitmap)
+
+                 //Crear el marcador despues de que el estilo este cargado
+                 val anotationApi = mapView.annotations
+                 val pointAnnotationManager = anotationApi.createPointAnnotationManager()
+
+                 val pointAnnotationOptions = PointAnnotationOptions()
+                     .withPoint(Point.fromLngLat(-1.097681, 40.327509))
+                     .withIconImage("custom-maker")
+                     .withIconSize(1.5)
+
+                 pointAnnotationManager.create(pointAnnotationOptions)
              }
          }
-
-        //Pngo un marker
-        addMarker()
-    }
-
-    private fun addMarker() {
-        val anotationApi = mapView.annotations
-        val pointAnotationManager = anotationApi.createPointAnnotationManager()
-
-        //configurar las opciones del marker
-        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.marcker_red)
-        mapView.mapboxMap.loadStyle(
-            "custom-maker",
-            bitmap
-        )
-
-        val pointAnnotationOptions = PointAnnotationOptions()
-            .withPoint(Point.fromLngLat(-1.097681, 40.327509))
-            .withIconImage("custom-maker")
-            .withIconSize(1.5)
-
-        pointAnotationManager.create(pointAnnotationOptions)
     }
 }
