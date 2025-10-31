@@ -61,6 +61,20 @@
                     app:layout_constraintStart_toEndOf="@+id/imguser"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <Button
+                    android:id="@+id/btn_salir"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="60dp"
+                    android:backgroundTint="@color/vereClaro"
+                    android:text="Salir"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_bienvenida"
+                    app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView

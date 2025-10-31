@@ -2,17 +2,22 @@ package org.iesch.app_MENU_ESTHER
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import org.iesch.app_MENU_ESTHER.apirazas.RazasApiActivity
 import org.iesch.app_MENU_ESTHER.calculadora.CalculadoraActivity
 import org.iesch.app_MENU_ESTHER.cine.ListaPeliculasActivity
 import org.iesch.app_MENU_ESTHER.databinding.ActivityMenuBinding
 import org.iesch.app_MENU_ESTHER.edadcanina.EdadCaninaActivity
 import org.iesch.app_MENU_ESTHER.fragments.FragmentsActivity
+import org.iesch.app_MENU_ESTHER.login.LoginActivity
+import org.iesch.app_MENU_ESTHER.login.datastore.LoginDataStoreManager
 import org.iesch.app_MENU_ESTHER.maps.MapasActivity
 import org.iesch.app_MENU_ESTHER.quizz.QuizzPrincipalActivity
 import org.iesch.app_MENU_ESTHER.settings.SettingsActivity
@@ -21,6 +26,7 @@ import org.iesch.app_MENU_ESTHER.superheroes.RegistroSuperHeroeActivity
 class MenuActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
+    private lateinit var loginDataStore: LoginDataStoreManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -28,6 +34,9 @@ class MenuActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMenuBinding.inflate( layoutInflater )
         setContentView(binding.root)
+
+        //Inicializo el DataStore
+        loginDataStore = LoginDataStoreManager(this)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -37,8 +46,6 @@ class MenuActivity : AppCompatActivity() {
         binding.tvBienvenida.text = "Hola, $correo"
 
         configurarMenu()
-
-
     }
 
     private fun configurarMenu() {
@@ -51,6 +58,8 @@ class MenuActivity : AppCompatActivity() {
         binding.btnSettings.setOnClickListener { irASettings() }
         binding.btnFragments.setOnClickListener { irAMenuFragments() }
         binding.btnMapas.setOnClickListener { irAMapas() }
+        //Boton de salir
+        binding.btnSalir.setOnClickListener { hacerLogout() }
     }
 
     private fun irAPeliculas() {
@@ -93,12 +102,28 @@ class MenuActivity : AppCompatActivity() {
         startActivity(irAQuizz)
 
     }
+    private fun irAMapas() {
+        val irAMapas = Intent(this, MapasActivity::class.java)
+        startActivity(irAMapas)
+    }
+
+    private fun hacerLogout(){
+        lifecycleScope.launch {
+            loginDataStore.logout()
+            Toast.makeText(this@MenuActivity, R.string.toastTextCerrarSesion, Toast.LENGTH_LONG).show()
+            irALogin()
+        }
+    }
+
+    private fun irALogin(){
+        val irALogin = Intent(this, LoginActivity::class.java)
+        //Limpio el stack de actividades para que no se pueda volver atrás
+        irALogin.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(irALogin)
+        finish()
+    }
 
 }
 
-private fun MenuActivity.irAMapas() {
-    val irAMapas = Intent(this, MapasActivity::class.java)
-    startActivity(irAMapas)
-}
 
 
