@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MenuActivity">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/imageView"
@@ -54,11 +53,25 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:text="Hola, Esther"
-                    android:textSize="20sp"
+                    android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@color/texto_principal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imguser"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_salir"
+                    android:layout_width="95dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="60dp"
+                    android:backgroundTint="@color/vereClaro"
+                    android:text="Salir"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_bienvenida"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -579,7 +592,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/bg_2" />
+                    app:srcCompat="@drawable/bg_3" />
 
                 <ImageView
                     android:id="@+id/ic_usuario"

@@ -10,12 +10,8 @@
     <!-- Splash Screen Theme -->
     <style name="Theme._03_Menu_Principal.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/splash_background</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
-        <!-- duracion de la animacion-->
-        <item name="windowSplashScreenAnimationDuration">2000</item>
-        <item name="postSplashScreenTheme">@style/Theme._03_Menu_Principal</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme._03_Menu_Principal</item>
     </style>
-
 
     <!-- Tema para Edad Canina -->
     <style name="Edad_Canina" parent="Theme.AppCompat.DayNight.DarkActionBar" >
@@ -36,6 +32,105 @@
         <item name="colorAccent">@color/menu_naranja</item>
         <item name="colorButtonNormal">@color/menu_naranja</item>
         <item name="statusBarBackground">@color/menu_naranja</item>
+
+    </style>
+
+    <!--Tema para Ultimas Películas-->
+    <style name="Ultimas_peliculas" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/menu_rosa</item>
+        <item name="colorOnPrimary">@color/menu_rosa</item>
+        <item name="colorAccent">@color/menu_rosa</item>
+        <item name="colorButtonNormal">@color/menu_rosa</item>
+        <item name="statusBarBackground">@color/menu_rosa</item>
+
+    </style>
+
+    <!--Tema para API razas-->
+    <style name="API_Rest_Razas" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/menu_azul</item>
+        <item name="colorOnPrimary">@color/menu_azul</item>
+        <item name="colorAccent">@color/menu_azul</item>
+        <item name="colorButtonNormal">@color/menu_azul</item>
+        <item name="statusBarBackground">@color/menu_azul</item>
+
+    </style>
+
+    <!--Tema para menu fragments-->
+    <style name="Menu_Fragments" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/menu_verdeClaro</item>
+        <item name="colorOnPrimary">@color/menu_verdeClaro</item>
+        <item name="colorAccent">@color/menu_verdeClaro</item>
+        <item name="colorButtonNormal">@color/menu_verdeClaro</item>
+        <item name="statusBarBackground">@color/menu_verdeClaro</item>
+
+    </style>
+
+    <!--Tema para Settings-->
+    <style name="Settings" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/menu_verdeOscuro</item>
+        <item name="colorOnPrimary">@color/menu_verdeOscuro</item>
+        <item name="colorAccent">@color/menu_verdeOscuro</item>
+        <item name="colorButtonNormal">@color/menu_verdeOscuro</item>
+        <item name="statusBarBackground">@color/menu_verdeOscuro</item>
+
+    </style>
+
+    <!--Tema para Mapas-->
+    <style name="Mapas" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/menu_morado</item>
+        <item name="colorOnPrimary">@color/menu_morado</item>
+        <item name="colorAccent">@color/menu_morado</item>
+        <item name="colorButtonNormal">@color/menu_morado</item>
+        <item name="statusBarBackground">@color/menu_morado</item>
+
+    </style>
+
+    <!--Tema para firebase-->
+    <style name="Firebase" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/menu_rojo</item>
+        <item name="colorOnPrimary">@color/menu_rojo</item>
+        <item name="colorAccent">@color/menu_rojo</item>
+        <item name="colorButtonNormal">@color/menu_rojo</item>
+        <item name="statusBarBackground">@color/menu_rojo</item>
+
+    </style>
+
+    <!--Tema para Calculadora-->
+    <style name="Calculadora" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/practica_rosa</item>
+        <item name="colorOnPrimary">@color/practica_rosa</item>
+        <item name="colorAccent">@color/practica_rosa</item>
+        <item name="colorButtonNormal">@color/practica_rosa</item>
+        <item name="statusBarBackground">@color/practica_rosa</item>
+
+    </style>
+
+    <!--Tema para Quizz-->
+    <style name="Quizz" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/practica_azul</item>
+        <item name="colorOnPrimary">@color/practica_azul</item>
+        <item name="colorAccent">@color/practica_azul</item>
+        <item name="colorButtonNormal">@color/practica_azul</item>
+        <item name="statusBarBackground">@color/practica_azul</item>
+
+    </style>
+
+    <!--Tema para firebase-->
+    <style name="usuario" parent="Theme.AppCompat.DayNight.DarkActionBar" >
+
+        <item name="colorPrimary">@color/practica_verde</item>
+        <item name="colorOnPrimary">@color/practica_verde</item>
+        <item name="colorAccent">@color/practica_verde</item>
+        <item name="colorButtonNormal">@color/practica_verde</item>
+        <item name="statusBarBackground">@color/practica_verde</item>
 
     </style>
 

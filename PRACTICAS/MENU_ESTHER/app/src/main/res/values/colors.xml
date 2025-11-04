@@ -13,9 +13,13 @@
     <color name="my_dark_primary">#E75719</color>
     <color name="menu_morado">#B177F0</color>
     <color name="menu_rojo">#FF5858</color>
+    <color name="practica_rosa">#FBE6DD</color>
+    <color name="practica_azul">#C0E6FF</color>
+    <color name="practica_verde">#D0FDD1</color>
 
     <!--Color splash screem-->
     <color name="splash_background">#FBE6DD</color>
+    <color name="splash_general_background">#FFC6E4</color>
 
 
     <color name="bg_home_fragments">#ABEF99</color>

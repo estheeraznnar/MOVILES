@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".login.LoginActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/iniciarSesion"
@@ -37,6 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:hint="@string/textEmail"
+        android:textColor="@color/texto_principal"
         app:layout_constraintTop_toBottomOf="@+id/iniciarSesion" />
 
     <EditText
@@ -49,6 +49,7 @@
         android:ems="10"
         android:inputType="textPassword"
         android:hint="@string/contraseña"
+        android:textColor="@color/texto_principal"
         app:layout_constraintEnd_toEndOf="@+id/textEmail"
         app:layout_constraintStart_toStartOf="@+id/textEmail"
         app:layout_constraintTop_toBottomOf="@+id/textEmail" />

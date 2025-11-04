@@ -15,9 +15,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="15dp"
-        android:background="@color/azulVerdoso3"
         android:gravity="center"
         android:text="QUIZZ"
+        android:background="@color/practica_azul"
         android:textColor="@color/black"
         android:textSize="25dp"
         android:textStyle="bold"
@@ -33,7 +33,7 @@
         android:text="@string/numero_preguta"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/texto_principal"
         app:layout_constraintEnd_toEndOf="@+id/quizz"
         app:layout_constraintStart_toStartOf="@+id/quizz"
         app:layout_constraintTop_toBottomOf="@+id/quizz" />
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/titulo_pregunta"
-        android:textColor="@color/black"
+        android:textColor="@color/texto_principal"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/quizz"
@@ -56,7 +56,6 @@
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:layout_marginTop="45dp"
-        android:background="@color/azulVerdoso2"
         app:layout_constraintTop_toBottomOf="@+id/txPregunta"
         tools:layout_editor_absoluteX="16dp" />
 
@@ -74,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:padding="12dp"
-            android:textColor="@color/black"
+            android:textColor="@color/texto_principal"
             android:text="@string/opcion_1" />
 
         <RadioButton
@@ -82,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:padding="12dp"
-            android:textColor="@color/black"
+            android:textColor="@color/texto_principal"
             android:text="@string/opcion_2" />
 
         <RadioButton
@@ -90,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:padding="12dp"
-            android:textColor="@color/black"
+            android:textColor="@color/texto_principal"
             android:text="@string/opcion_3" />
 
         <RadioButton
@@ -98,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:padding="12dp"
-            android:textColor="@color/black"
+            android:textColor="@color/texto_principal"
             android:text="@string/opcion_4" />
     </RadioGroup>
 
@@ -109,7 +108,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:backgroundTint="@color/gris2"
+
         android:text="@string/boton_enviar"
         android:textColor="@color/black"
         android:textSize="15sp"

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Círculo Grande (Teal oscuro) -->
+    <ImageView
+        android:id="@+id/ivCirculo1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:src="@drawable/circulo_grande"
+        android:contentDescription="Círculo 1" />
+
+    <!-- Círculo Mediano (Teal medio) -->
+    <ImageView
+        android:id="@+id/ivCirculo2"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:src="@drawable/circulo_mediano"
+        android:contentDescription="Círculo 2" />
+
+    <!-- Círculo Pequeño (Cyan claro) -->
+    <ImageView
+        android:id="@+id/ivCirculo3"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:src="@drawable/circulo_pequeno"
+        android:contentDescription="Círculo 3" />
+
+    <!-- Texto centrado -->
+    <TextView
+        android:id="@+id/tvSplashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="MENU\nPRINCIPAL\nESTHER.A"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp" />
+
+</FrameLayout>

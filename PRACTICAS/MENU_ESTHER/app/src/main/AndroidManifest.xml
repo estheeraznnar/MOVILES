@@ -14,23 +14,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._03_Menu_Principal">
         <activity
+            android:name=".login.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme._03_Menu_Principal"/>
+        <activity
+            android:name=".datastore.DataStoreActivity"
+            android:exported="false"
+            android:theme="@style/usuario" />
+        <activity
             android:name=".maps.MapasActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Mapas" />
         <activity
             android:name=".quizz.QuizzResultadoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Quizz" />
         <activity
             android:name=".quizz.QuizzPrincipalActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Quizz" />
         <activity
             android:name=".MenuActivity"
             android:exported="false" />
         <activity
             android:name=".calculadora.CalculadoraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Calculadora" />
         <activity
             android:name=".cine.ListaPeliculasActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Ultimas_peliculas" />
         <activity
             android:name=".settings.SettingsActivity"
             android:exported="false" />
@@ -48,12 +61,14 @@
             android:theme="@style/Edad_Canina" />
         <activity
             android:name=".fragments.FragmentsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Menu_Fragments" />
         <activity
             android:name=".apirazas.RazasApiActivity"
-            android:exported="false" /> <!-- La actividad de login será la que inicia la App -->
+            android:exported="false"
+            android:theme="@style/API_Rest_Razas" /> <!-- La actividad de login será la que inicia la App -->
         <activity
-            android:name=".login.LoginActivity"
+            android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/Theme._03_Menu_Principal.Splash">
             <intent-filter>

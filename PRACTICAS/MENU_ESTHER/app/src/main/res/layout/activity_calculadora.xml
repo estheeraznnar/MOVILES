@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".calculadora.CalculadoraActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mi_calculadora"
-            android:background="@color/verde"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
+            android:background="@color/practica_rosa"
             android:textSize="30dp"
             android:padding="18dp" />
 
@@ -31,6 +30,7 @@
             android:text="@string/bienbenida"
             android:textSize="25dp"
             android:padding="10dp"
+            android:textColor="@color/texto_principal"
             android:textAlignment="center"
             android:textStyle="bold"/>
 
@@ -54,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:textSize="15dp"
+                android:textColor="@color/texto_principal"
                 android:text="@string/pedir_n1" />
 
             <TextView
@@ -62,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:textSize="15dp"
+                android:textColor="@color/texto_principal"
                 android:text="@string/pedir_n2" />
 
         </LinearLayout>
@@ -82,7 +84,8 @@
                 android:inputType="numberDecimal"
                 android:layout_margin="5dp"
                 android:textSize="20dp"
-                android:hint="@string/n1"/>
+                android:hint="@string/n1"
+                android:textColor="@color/texto_principal"/>
 
             <EditText
                 android:id="@+id/n2"
@@ -92,7 +95,8 @@
                 android:inputType="numberDecimal"
                 android:layout_margin="5dp"
                 android:textSize="20dp"
-                android:hint="@string/n2"/>
+                android:hint="@string/n2"
+                android:textColor="@color/texto_principal"/>
 
         </LinearLayout>
 
@@ -108,7 +112,6 @@
                 android:layout_weight="0.5"
                 android:layout_margin="14dp"
                 android:gravity="center"
-                android:backgroundTint="@color/vereClaro"
                 android:text="@string/suma" />
 
             <Button
@@ -118,7 +121,6 @@
                 android:layout_weight="0.5"
                 android:layout_margin="14dp"
                 android:gravity="center"
-                android:backgroundTint="@color/vereClaro"
                 android:text="@string/resta" />
 
         </LinearLayout>
@@ -135,7 +137,6 @@
                 android:layout_weight="0.5"
                 android:layout_margin="14dp"
                 android:gravity="center"
-                android:backgroundTint="@color/vereClaro"
                 android:text="@string/multiplicacion" />
 
             <Button
@@ -145,7 +146,6 @@
                 android:layout_weight="0.5"
                 android:layout_margin="14dp"
                 android:gravity="center"
-                android:backgroundTint="@color/vereClaro"
                 android:text="@string/division" />
 
         </LinearLayout>
@@ -157,13 +157,14 @@
             android:padding="10dp"
             android:textSize="15dp"
             android:textStyle="bold"
-            android:text="@string/instruccion_resultado" />
+            android:text="@string/instruccion_resultado"
+            android:textColor="@color/texto_principal"/>
 
         <TextView
             android:id="@+id/resultado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/texto_principal"
             android:padding="8dp"
             android:textSize="20dp"
             tools:text="el resultado"/>

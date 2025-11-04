@@ -8,7 +8,10 @@
     <string name="toastTextEdad">You must enter a numeric value.</string>
 
     <!--Login-->
-    <string name="toastTextLogin">You must fill in all fields</string>
+    <string name="toastTextLoginEmail">The email address cannot be empty.</string>
+    <string name="toastTextLoginContra">The password cannot be empty.</string>
+    <string name="toastTextCerrarSesion">Closed session</string>
+    <string name="toastTextLogin">Successful registration</string>
     <string name="iniciarSesion">LOGIN</string>
     <string name="textEmail">Email</string>
     <string name="contraseña">Password</string>

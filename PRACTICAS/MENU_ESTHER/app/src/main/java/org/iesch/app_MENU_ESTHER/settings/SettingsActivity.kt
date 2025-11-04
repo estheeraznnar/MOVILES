@@ -15,14 +15,18 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import org.iesch.app_MENU_ESTHER.R
 import org.iesch.app_MENU_ESTHER.databinding.ActivitySettingsBinding
+import org.iesch.app_MENU_ESTHER.datastore.DataStoreManager
+import org.iesch.app_MENU_ESTHER.login.datastore.LoginDataStoreManager
 import org.iesch.app_MENU_ESTHER.settings.model.SettingsData
 
 
@@ -42,6 +46,8 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingsBinding
     // 8
     private var firstTime: Boolean = true
+    private lateinit var dataStoreManager: DataStoreManager
+    private lateinit var loginDataStore: LoginDataStoreManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +59,16 @@ class SettingsActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        loginDataStore = LoginDataStoreManager(this)
+
+        // Obtengo el email del usuario para sincronizar el modo oscuro
+        lifecycleScope.launch {
+            val userEmail = loginDataStore.userEmail.first()
+            if (userEmail.isNotEmpty()) {
+                dataStoreManager = DataStoreManager(this@SettingsActivity, userEmail)
+            }
+        }
+
         // 6 Llamo a la funcion para obtener los datos guardados
         // Vamos a consumir ese Flow
         CoroutineScope(Dispatchers.IO).launch {
@@ -91,6 +107,10 @@ class SettingsActivity : AppCompatActivity() {
             }
             CoroutineScope(Dispatchers.IO).launch {
                 saveOptions(KEY_DARKMODE, value )
+                // Guardo también en DataStoreManager para sincronizar con DataStoreActivity
+                if (::dataStoreManager.isInitialized) {
+                    dataStoreManager.saveModoOscuro(value)
+                }
             }
         }
         binding.swBluetooth.setOnCheckedChangeListener { // El primer parámetro es el boton
