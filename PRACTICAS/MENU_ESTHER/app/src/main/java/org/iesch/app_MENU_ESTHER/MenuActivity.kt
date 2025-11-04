@@ -10,7 +10,10 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+<<<<<<< HEAD
 import kotlinx.coroutines.flow.first
+=======
+>>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
 import kotlinx.coroutines.launch
 import org.iesch.app_MENU_ESTHER.apirazas.RazasApiActivity
 import org.iesch.app_MENU_ESTHER.calculadora.CalculadoraActivity
@@ -54,6 +57,7 @@ class MenuActivity : AppCompatActivity() {
         cargarUsuario()
 
         configurarMenu()
+<<<<<<< HEAD
     }
 
     private fun cargarTemaUsuario() {
@@ -81,6 +85,8 @@ class MenuActivity : AppCompatActivity() {
                 binding.tvBienvenida.text = "Hola, Usuario"
             }
         }
+=======
+>>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
     }
 
     private fun configurarMenu() {
@@ -93,6 +99,7 @@ class MenuActivity : AppCompatActivity() {
         binding.btnSettings.setOnClickListener { irASettings() }
         binding.btnFragments.setOnClickListener { irAMenuFragments() }
         binding.btnMapas.setOnClickListener { irAMapas() }
+<<<<<<< HEAD
         binding.btnSalir.setOnClickListener { hacerLogout() } //Boton de salir
         binding.btnUsuario.setOnClickListener { irADataStore() }
     }
@@ -100,6 +107,10 @@ class MenuActivity : AppCompatActivity() {
     private fun irADataStore() {
         val irADataStore = Intent(this, DataStoreActivity::class.java)
         startActivity(irADataStore)
+=======
+        //Boton de salir
+        binding.btnSalir.setOnClickListener { hacerLogout() }
+>>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
     }
 
     private fun irAPeliculas() {

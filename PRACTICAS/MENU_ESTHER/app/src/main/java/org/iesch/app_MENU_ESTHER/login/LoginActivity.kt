@@ -16,7 +16,10 @@ import kotlinx.coroutines.launch
 import org.iesch.app_MENU_ESTHER.MenuActivity
 import org.iesch.app_MENU_ESTHER.R
 import org.iesch.app_MENU_ESTHER.databinding.ActivityLoginBinding
+<<<<<<< HEAD
 import org.iesch.app_MENU_ESTHER.datastore.DataStoreManager
+=======
+>>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
 import org.iesch.app_MENU_ESTHER.login.datastore.LoginDataStoreManager
 import kotlin.toString
 
@@ -43,9 +46,12 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
+<<<<<<< HEAD
         //Verifico datos guardados en la base de datos
         verificarDatosGuardados()
 
+=======
+>>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
         // Compruebo si el usuario ya esta logueado
         comprobarSiUsuLog()
 
@@ -101,6 +107,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+<<<<<<< HEAD
 
     //Verifica y muestra los datos guardados en DataStore
     private fun verificarDatosGuardados() {
@@ -118,4 +125,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+=======
+>>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
 }
