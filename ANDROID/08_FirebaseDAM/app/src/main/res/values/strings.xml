@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">08_FirebaseDAM</string>
+    <!--Firebase outh Google Token-->
+    <string name="web_client">278810743705-j2r8v8h1dilh737tgmalpitgfe8qnhjs.apps.googleusercontent.com</string>
 </resources>

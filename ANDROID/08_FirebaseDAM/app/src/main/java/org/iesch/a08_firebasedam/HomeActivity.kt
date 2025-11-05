@@ -10,7 +10,8 @@ import com.google.firebase.auth.auth
 import org.iesch.a08_firebasedam.databinding.ActivityHomeBinding
 
 enum class ProviderType{
-    EMAIL_CONTRASEÑA
+    EMAIL_CONTRASEÑA,
+    GOOGLE
 
 }
 class HomeActivity : AppCompatActivity() {
