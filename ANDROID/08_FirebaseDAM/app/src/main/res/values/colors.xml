@@ -8,6 +8,13 @@
     <color name="azul_firebase">#86DBFF</color>
     <color name="naranja_firebase">#FFB285</color>
     <color name="gris_firebase">#D9D7D7</color>
+    <color name="verde_firebase">#639B83</color>
+    <color name="rosa_firebase">#C756A9</color>
+    <color name="azul2_firebase">#48AFD3</color>
 
+
+    <color name="bg_1">#56D1FB</color>
+    <color name="bg_2">#639B83</color>
+    <color name="bg_3">#FFD7F5</color>
 
 </resources>

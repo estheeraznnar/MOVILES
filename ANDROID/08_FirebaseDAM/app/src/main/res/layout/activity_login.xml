@@ -48,24 +48,22 @@
             android:orientation="horizontal">
             <Button
                 android:id="@+id/registerButton"
-                android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Registrar"
-                android:backgroundTint="@color/naranja_firebase"/>
+                android:backgroundTint="@color/naranja_firebase"
+                android:text="Registrar"/>
             <Space
                 android:layout_width="8dp"
                 android:layout_height="8dp"
                 android:layout_weight="1"/>
             <Button
                 android:id="@+id/loginButton"
-                android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Login"
-                android:backgroundTint="@color/rojo_firebase"/>
+                android:backgroundTint="@color/rojo_firebase"
+                android:text="Login"/>
 
         </LinearLayout>
         <Space
@@ -73,7 +71,6 @@
             android:layout_height="8dp"/>
         <Button
             android:id="@+id/loginGoogleButton"
-            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/azul_firebase"
