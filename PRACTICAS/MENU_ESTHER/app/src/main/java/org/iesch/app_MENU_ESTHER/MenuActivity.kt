@@ -2,6 +2,7 @@ package org.iesch.app_MENU_ESTHER
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,11 +11,10 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-<<<<<<< HEAD
+import com.google.firebase.remoteconfig.remoteConfig
 import kotlinx.coroutines.flow.first
-=======
->>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import org.iesch.app_MENU_ESTHER.apirazas.RazasApiActivity
 import org.iesch.app_MENU_ESTHER.calculadora.CalculadoraActivity
 import org.iesch.app_MENU_ESTHER.cine.ListaPeliculasActivity
@@ -42,6 +42,7 @@ class MenuActivity : AppCompatActivity() {
         binding = ActivityMenuBinding.inflate( layoutInflater )
         setContentView(binding.root)
 
+        aplicarRemoteConfig()
         //Inicializo el DataStore
         loginDataStore = LoginDataStoreManager(this)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -57,7 +58,47 @@ class MenuActivity : AppCompatActivity() {
         cargarUsuario()
 
         configurarMenu()
-<<<<<<< HEAD
+
+        aplicarColorRemoteConfig()
+    }
+
+    private fun aplicarColorRemoteConfig() {
+        // Detectar si está en modo oscuro
+        val isNightMode = when (resources.configuration.uiMode and
+                android.content.res.Configuration.UI_MODE_NIGHT_MASK) {
+            android.content.res.Configuration.UI_MODE_NIGHT_YES -> true
+            else -> false
+        }
+
+        val colorKey = if (isNightMode) {
+            "menu_background_color_dark"
+        } else {
+            "menu_background_color_light"
+        }
+
+        com.google.firebase.Firebase.remoteConfig.fetchAndActivate().addOnCompleteListener {
+            val colorDeFondo = com.google.firebase.Firebase.remoteConfig.getString(colorKey)
+            if (colorDeFondo.isNotEmpty()) {
+                try {
+                    binding.main.setBackgroundColor(android.graphics.Color.parseColor(colorDeFondo))
+                } catch (e: Exception) {
+                    val defaultColor = if (isNightMode) "#FF000000" else "#E8F5E9"
+                    binding.main.setBackgroundColor(android.graphics.Color.parseColor(defaultColor))
+                    Log.e("MenuActivity", "Error al aplicar color: ${e.message}")
+                }
+            }
+        }
+    }
+
+    private fun aplicarRemoteConfig() {
+        com.google.firebase.Firebase.remoteConfig.fetchAndActivate().addOnCompleteListener {
+            val color = com.google.firebase.Firebase.remoteConfig.getString("menu_background_color")
+            if (color.isNotEmpty()) {
+                try {
+                    binding.root.setBackgroundColor(android.graphics.Color.parseColor(color))
+                } catch (e: Exception) {}
+            }
+        }
     }
 
     private fun cargarTemaUsuario() {
@@ -80,13 +121,27 @@ class MenuActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val email = loginDataStore.userEmail.first()
             if (email.isNotEmpty()){
-                binding.tvBienvenida.text = "Hola, $email"
-            }else{
+                // Obtener el nombre desde Firestore
+                try {
+                    val db = com.google.firebase.firestore.FirebaseFirestore.getInstance()
+                    val document = db.collection("users").document(email).get().await()
+
+                    if (document.exists()) {
+                        val nombre = document.getString("nombre") ?: email
+                        binding.tvBienvenida.text = "Hola, $nombre"
+                    } else {
+                        // Si no existe en Firestore, mostrar el email
+                        binding.tvBienvenida.text = "Hola, $email"
+                    }
+                } catch (e: Exception) {
+                    // Si hay error, mostrar el email
+                    binding.tvBienvenida.text = "Hola, $email"
+                    android.util.Log.e("MenuActivity", "Error al cargar usuario: ${e.message}")
+                }
+            } else {
                 binding.tvBienvenida.text = "Hola, Usuario"
             }
         }
-=======
->>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
     }
 
     private fun configurarMenu() {
@@ -99,7 +154,6 @@ class MenuActivity : AppCompatActivity() {
         binding.btnSettings.setOnClickListener { irASettings() }
         binding.btnFragments.setOnClickListener { irAMenuFragments() }
         binding.btnMapas.setOnClickListener { irAMapas() }
-<<<<<<< HEAD
         binding.btnSalir.setOnClickListener { hacerLogout() } //Boton de salir
         binding.btnUsuario.setOnClickListener { irADataStore() }
     }
@@ -107,10 +161,6 @@ class MenuActivity : AppCompatActivity() {
     private fun irADataStore() {
         val irADataStore = Intent(this, DataStoreActivity::class.java)
         startActivity(irADataStore)
-=======
-        //Boton de salir
-        binding.btnSalir.setOnClickListener { hacerLogout() }
->>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
     }
 
     private fun irAPeliculas() {

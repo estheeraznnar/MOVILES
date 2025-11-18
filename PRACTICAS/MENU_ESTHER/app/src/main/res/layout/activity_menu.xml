@@ -62,21 +62,12 @@
 
                 <Button
                     android:id="@+id/btn_salir"
-<<<<<<< HEAD
                     android:layout_width="95dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="60dp"
                     android:backgroundTint="@color/vereClaro"
                     android:text="Salir"
                     android:textSize="16sp"
-=======
-                    android:layout_width="100dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="60dp"
-                    android:backgroundTint="@color/vereClaro"
-                    android:text="Salir"
-                    android:textSize="20sp"
->>>>>>> 9baba4d005025a311580ff6e3945a55595245cd4
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

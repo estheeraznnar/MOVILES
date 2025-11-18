@@ -22,14 +22,17 @@ class LoginDataStoreManager(private val context: Context) {
         private val  EMAIL_KEY = stringPreferencesKey("user_email")
         private val  PASSWORD_KEY = stringPreferencesKey("user_password")
         private val  IS_LOGGERD_KEY = booleanPreferencesKey("is_logged")
+        // Nueva clave para almacenar el tipo de login
+        private val LOGIN_TYPE_KEY = stringPreferencesKey("login_type")
     }
 
-    //Funcion para guardar el email y la contraseña cuando el usuario hace login
-    suspend fun saveLoginData(email: String, passwd: String){
+    //Funcion para guardar el email y la contraseña cuando el usuario hace login y el tipo de login
+    suspend fun saveLoginData(email: String, passwd: String, loginType: String = "firebase"){
         context.loginDataStore.edit { preferences ->
             preferences[EMAIL_KEY] = email
             preferences[PASSWORD_KEY] = passwd
             preferences[IS_LOGGERD_KEY] = true
+            preferences[LOGIN_TYPE_KEY] = loginType
         }
     }
 
@@ -53,6 +56,11 @@ class LoginDataStoreManager(private val context: Context) {
     //Un flow para obtener la contraseña guardada (esto es opcional, por lo normal no se muestra)
     val usePasswd: Flow<String> = context.loginDataStore.data.map { preferences ->
         preferences[PASSWORD_KEY] ?: ""
+    }
+
+    // Flow para obtener el tipo de login (firebase o google)
+    val loginType: Flow<String> = context.loginDataStore.data.map { preferences ->
+        preferences[LOGIN_TYPE_KEY] ?: "firebase"
     }
 
 }

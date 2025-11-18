@@ -1,6 +1,9 @@
 <resources>
     <!--Edad Canina-->
     <string name="app_name">MENU_PRINCIPAL_ESTHER</string>
+    <string name="web_client">899248645456-u6qf5l29u3h02hi4pn1cjd60rfiqb00s.apps.googleusercontent.com</string>
+
+
     <string name="texto_principal">How old are you?</string>
     <string name="introduce_tu_edad">Your age?</string>
     <string name="calcular">Calculate</string>

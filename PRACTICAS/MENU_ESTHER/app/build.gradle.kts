@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     // 5 - Añadimos el plugin parzelize
     id("kotlin-parcelize")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -56,6 +57,22 @@ dependencies {
     implementation("androidx.core:core-splashscreen:1.0.0")
     // Mapbox
     implementation("com.mapbox.maps:android-ndk27:11.16.1")
+    //Firebase
+    implementation(platform("com.google.firebase:firebase-bom:34.5.0"))
+    //Firebase analitics
+    implementation("com.google.firebase:firebase-analytics")
+    //Firebase de autenticacion con email y contraseña
+    implementation("com.google.firebase:firebase-auth")
+    //Firebase auth con google
+    implementation("androidx.credentials:credentials:1.3.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
+    //Firebase Cloud Messaging
+    implementation("com.google.firebase:firebase-messaging")
+    //Firebase Remote Config
+    implementation("com.google.firebase:firebase-config")
+    //Firebase Firestore
+    implementation("com.google.firebase:firebase-firestore")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
