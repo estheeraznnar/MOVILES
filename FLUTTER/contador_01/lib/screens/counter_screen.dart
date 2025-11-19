@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+class CounterScreen extends StatefulWidget{
+  const CounterScreen
+  
+
+}
+
+
 class CounterScreen extends StatelessWidget {
   const CounterScreen({super.key});
 
@@ -22,7 +29,7 @@ class CounterScreen extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           child: Icon( Icons.add),
           onPressed: (){
-            
+
           }
           ),
       );
