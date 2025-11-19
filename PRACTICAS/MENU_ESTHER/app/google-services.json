@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "899248645456",
+    "project_id": "mi-menu-efbed",
+    "storage_bucket": "mi-menu-efbed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899248645456:android:c9c2eed7976808632c3855",
+        "android_client_info": {
+          "package_name": "org.iesch.app_MENU_ESTHER"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "899248645456-1ojsin73oconk5obllpqe6uqob67ciih.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.iesch.app_MENU_ESTHER",
+            "certificate_hash": "4378add27ae63e36c5dcb2e000c40a3966f39747"
+          }
+        },
+        {
+          "client_id": "899248645456-u6qf5l29u3h02hi4pn1cjd60rfiqb00s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkfWOONIe8GkOnUUmBrLDh9qtXarBuzp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "899248645456-u6qf5l29u3h02hi4pn1cjd60rfiqb00s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

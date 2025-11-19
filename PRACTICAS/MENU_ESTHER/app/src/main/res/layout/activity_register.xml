@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginActivity">
+    tools:context=".login.RegisterActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -52,10 +52,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
-                android:text="Bienvenido"
+                android:text="Crear Cuenta"
                 android:textColor="@color/texto_principal"
                 android:textSize="28sp"
                 android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiNombre"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="         Nombre"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="#FF6F00"
+                app:startIconDrawable="@drawable/icopn_persona"
+                app:startIconTint="#FF6F00">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilUser"
@@ -103,61 +125,39 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btnLoginFirebase"
+                android:id="@+id/btnRegistroFirebase"
                 android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginBottom="12dp"
-                android:backgroundTint="#FF6F00"
+                android:backgroundTint="#355426"
                 android:drawableStart="@drawable/icon_firebase_small"
                 android:drawablePadding="12dp"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:text="Login con Firebase"
+                android:text="Registro con Firebase"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <Button
-                 android:id="@+id/btnLoginGoogle"
-                android:clickable="true"
-                 android:layout_width="match_parent"
-                 android:layout_height="60dp"
-                 android:layout_marginBottom="24dp"
-                 android:backgroundTint="#4285F4"
-                 android:drawableStart="@android:drawable/ic_menu_search"
-                 android:drawablePadding="12dp"
-                 android:paddingStart="16dp"
-                 android:paddingEnd="16dp"
-                 android:text="Login con Google"
-                 android:textAllCaps="false"
-                 android:textColor="@android:color/white"
-                 android:textSize="16sp"
-                 android:textStyle="bold" />
-
             <TextView
-                android:id="@+id/tvRegister"
+                android:id="@+id/tvYaTengoCuenta"
                 android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="¿No tienes cuenta? Regístrate"
-                android:textColor="#34A853"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvForgotPassword"
-                android:clickable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="¿Olvidaste tu contraseña?"
+                android:text="¿Ya tienes cuenta? Inicia sesión"
                 android:textColor="#4285F4"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/btnRegistroFirebase"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
 
         </LinearLayout>
+
     </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

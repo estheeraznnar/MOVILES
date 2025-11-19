@@ -35,6 +35,7 @@ class QuizzPrincipalActivity : AppCompatActivity() {
         // Inicializo el binding con el layout de Home
         binding = ActivityQuizzPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root) // Asigno el layout a la actividad
+        supportActionBar?.hide()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
