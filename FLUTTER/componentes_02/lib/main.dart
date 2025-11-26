@@ -1,6 +1,6 @@
 import 'package:componentes_02/config/theme/app_theme.dart';
-import 'package:componentes_02/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'presentation/screens/screens.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,8 +11,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //para quitar el banner
-      theme: AppTheme(colorSeleccionado: 2).obtenerTema(),
-      home: HomeScreen()
+      theme: AppTheme(colorSeleccionado: 4).obtenerTema(),
+      //home: HomeScreen()
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/botones': (context) => BotonesScreen(),
+        '/listas': (context) => ListasScreen(),
+        '/tarjetas': (context) => TarjetasScreen(),
+        '/alertas': (context) => AlertaScreen(),
+      },
     );
   }
 }
