@@ -1,0 +1,57 @@
+Desarrolla una aplicación Android en Kotlin llamada “PizzaApp”,
+cuyo objetivo es mostrar un menú de pizzas e implementar un buscador por categoría.
+
+
+Requisitos y funcionalidades
+1.- Modelado de datos:
+
+    Crea las data classes Pizza y PizzaResponse para representar los datos de cada pizza
+    y la respuesta de la API.
+
+    Añade una fuente de datos falsa (PizzaDataSource) que devuelva una lista de pizzas de ejemplo,
+    con imágenes, descripciones, precio y categoría (al menos 4 categorías diferentes).
+
+2.- Vista principal:
+
+    Implementa un layout principal (activity_pizzas.xml) que incluya un título,
+    un SearchView para buscar, y un RecyclerView para mostrar una lista de pizzas.
+
+    Usa un card layout para mostrar cada pizza, incluyendo nombre, descripción, precio,
+    imagen y categoría.
+
+3.- Adaptador y ViewHolder:
+
+    Crea el adaptador PizzaAdapter y el PizzaViewHolder que conecten la lista de objetos
+    Pizza con el RecyclerView.
+
+4.- Lógica principal de la Activity:
+
+    Al iniciar la app, la vista principal debe mostrar todas las pizzas usando
+    los datos de PizzaDataSource.
+
+    Cuando el usuario escriba en el SearchView, la lista debe filtrar
+    y mostrar solo las pizzas cuya categoría coincida con el término de búsqueda
+    (no sensible a mayúsculas/minúsculas).
+
+    Si el buscador está vacío, la app debe mostrar de nuevo todas las pizzas.
+
+5.- Experiencia de usuario y feedback:
+
+    Muestra el número de resultados o utiliza Toasts para indicar búsquedas exitosas o vacías.
+
+    Usa imágenes reales (pueden ser URLs de Unsplash).
+
+    Si ocurre un error durante la carga, muestra un mensaje apropiado
+    (por ejemplo, con un Toast).
+
+
+
+Observaciones técnicas
+Utiliza ViewBinding y organiza correctamente el código en paquetes (model, adapter, raíz).
+
+Usa Coroutines para simular llamadas de red con un pequeño delay.
+
+El código debe compilar y funcionar sin conexiones externas (solo mock local).
+
+La aplicación debe responder de forma fluida a las búsquedas y cargar imágenes de
+manera eficiente con Picasso.

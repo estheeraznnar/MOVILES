@@ -29,7 +29,7 @@ import org.iesch.app_MENU_ESTHER.maps.MapasActivity
 import org.iesch.app_MENU_ESTHER.quizz.QuizzPrincipalActivity
 import org.iesch.app_MENU_ESTHER.settings.SettingsActivity
 import org.iesch.app_MENU_ESTHER.superheroes.RegistroSuperHeroeActivity
-
+/*signinReport para sacar el id de la app*/
 class MenuActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
