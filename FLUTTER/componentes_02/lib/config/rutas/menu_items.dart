@@ -41,6 +41,12 @@ final menuItems = <MenuItems>[
     subtitulo: 'una alerta en flutter', 
     link: '/alertas', 
     icono: Icons.alarm_on_rounded,
+  ),
+  MenuItems(
+    titulo: 'Sliders & Checks', 
+    subtitulo: 'unejemplo simple de sliders y checks', 
+    link: '/sliders', 
+    icono: Icons.check_box,
   )
 
 ];
