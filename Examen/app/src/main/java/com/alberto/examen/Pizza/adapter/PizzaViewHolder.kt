@@ -9,7 +9,6 @@ import com.alberto.examen.R
 
 // Esta clase recibirá la vista que vamos a pintar
 class PizzaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
     private val binding = ActivityEjercicio3Binding.bind(view)
 
     fun render(pizza: Pizza) {

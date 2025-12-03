@@ -12,6 +12,7 @@ import com.alberto.examen.databinding.ActivityPizzasBinding
 import com.alberto.examen.Pizza.adapter.PizzaAdapter
 import com.alberto.examen.Pizza.model.Pizza
 import com.alberto.examen.Pizza.model.PizzaDataSource
+import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -36,6 +37,9 @@ class Ejercicio3Activity : AppCompatActivity(), SearchView.OnQueryTextListener{
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Activar logs de Picasso para depurar
+        Picasso.get().setLoggingEnabled(true)
 
         getRetrofit()
         initRecyclerView()
