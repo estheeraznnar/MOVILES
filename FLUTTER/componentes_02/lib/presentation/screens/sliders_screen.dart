@@ -59,6 +59,9 @@ class _SlidersScreenState extends State<SlidersScreen> {
           ),*/
 
           SwitchListTile(
+            activeThumbColor: const Color.fromARGB(255, 138, 187, 140),
+            inactiveThumbColor: Colors.redAccent,
+            tileColor: const Color.fromARGB(255, 218, 216, 216),
             subtitle: Text('Habilitar el slider para agrandar la inagen'),
             title: Text('Habilitar Slider'),
             value: _checkValue,
