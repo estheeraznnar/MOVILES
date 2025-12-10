@@ -1,4 +1,5 @@
 import 'package:componentes_02/config/theme/app_theme.dart';
+import 'package:componentes_02/presentation/screens/navegationbar_screen.dart';
 import 'package:flutter/material.dart';
 import 'presentation/screens/screens.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/tarjetas': (context) => TarjetasScreen(),
         '/alertas': (context) => AlertaScreen(),
         '/sliders': (context) => SlidersScreen(),
+        '/navegationbar': (context) => NavegationBarScreen()
       },
     );
   }

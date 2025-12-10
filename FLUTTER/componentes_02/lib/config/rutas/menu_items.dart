@@ -47,6 +47,12 @@ final menuItems = <MenuItems>[
     subtitulo: 'unejemplo simple de sliders y checks', 
     link: '/sliders', 
     icono: Icons.check_box,
+  ),
+  MenuItems(
+    titulo: 'Navegation Bar', 
+    subtitulo: 'unejemplo simple de un navegation bar', 
+    link: '/navegationbar', 
+    icono: Icons.amp_stories_rounded,
   )
 
 ];
