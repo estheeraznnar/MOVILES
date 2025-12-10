@@ -72,22 +72,22 @@ class _NavegationBarScreenState extends State<_NavegationBarScreen> {
         Container(
           color: const Color.fromARGB(255, 92, 203, 255),
           alignment: Alignment.center,
-          child: const Text('Blue!'),
+          child: const Text('Home!'),
         ),
         Container(
           color: const Color.fromARGB(255, 134, 255, 160),
           alignment: Alignment.center,
-          child: const Text('Green!'),
+          child: const Text('Explore!'),
         ),
         Container(
           color: const Color.fromARGB(255, 255, 174, 201),
           alignment: Alignment.center,
-          child: const Text('Pink'),
+          child: const Text('Profile'),
         ),
         Container(
           color: const Color.fromARGB(255, 179, 151, 255),
           alignment: Alignment.center,
-          child: const Text('Purple'),
+          child: const Text('Settings'),
         ),
       ][currentPageIndex],
     );
