@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gestor_de_estados/pages/page1.dart';
 import 'package:gestor_de_estados/pages/page2.dart';
 import 'package:gestor_de_estados/pages/page3.dart';
+import 'package:gestor_de_estados/providers/contador_provider.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
    
@@ -17,7 +19,18 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Provider App'),), 
+      appBar: AppBar(
+        title: Text('Provider App'), 
+        actions: [
+          TextButton(
+            onPressed: null, 
+            child: Text(
+              context.watch<ContadorProvider>().contador.toString(),
+              style: TextStyle(color: Colors.white),
+            )
+          )
+        ],
+      ), 
       body: _pagina[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
