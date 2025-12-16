@@ -53,6 +53,24 @@ final menuItems = <MenuItems>[
     subtitulo: 'unejemplo simple de un navegation bar', 
     link: '/navegationbar', 
     icono: Icons.amp_stories_rounded,
-  )
+  ),
+  MenuItems(
+    titulo: 'Animaciones', 
+    subtitulo: 'Un simple ejemplo de animaciones en Flutter', 
+    link: '/animaciones', 
+    icono: Icons.animation,
+  ),
+  MenuItems(
+    titulo: 'Progress Indicator & SnackBar', 
+    subtitulo: 'Un simple ejemplo de Indicators y SnackBar', 
+    link: '/snackbar', 
+    icono: Icons.refresh_rounded,
+  ),
+  MenuItems(
+    titulo: 'Formularios', 
+    subtitulo: 'Un simple ejemplo de Formularios', 
+    link: '/formularios', 
+    icono: Icons.info_outline,
+  ),
 
 ];
