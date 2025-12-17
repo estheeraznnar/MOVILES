@@ -38,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
+            //cambia entre 0 y 1  (Marcador y resultado)
             _currentIndex = _currentIndex == 0 ? 1 : 0;
           });
         },
