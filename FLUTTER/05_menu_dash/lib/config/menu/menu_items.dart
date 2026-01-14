@@ -31,9 +31,9 @@ class MenuItems {
     ),
     OptionMenuItem(
       color: AppTheme.listaColores[4], 
-      iconData: Icons.flight_land_sharp, 
-      texto: 'Opcion 5', 
-      screenName: 'opcion 5',
+      iconData: Icons.design_services, 
+      texto: 'Diseño', 
+      screenName: 'estilos',
     ),
     
     OptionMenuItem(

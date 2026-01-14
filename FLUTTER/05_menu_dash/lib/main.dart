@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:menu_dash/screens/apijson_screen.dart';
+import 'package:menu_dash/screens/disenios_screens.dart';
 import 'package:menu_dash/screens/menu_screen.dart';
+import 'package:menu_dash/screens/simpsons_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,6 +16,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => MenuScreen(),
         'api1' : (context) => ApiJsonPlaceUsersScreen(), 
+        'simpsons' : (context) => SimpsonsScreen(),
+        'estilos' : (context) => DiseniosScreens(),
       },
     );
   }
