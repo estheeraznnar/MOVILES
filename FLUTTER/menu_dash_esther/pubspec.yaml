@@ -38,6 +38,8 @@ dependencies:
   dio: ^5.9.0
   provider: ^6.1.5+1
   cached_network_image: ^3.4.1
+  #url_launcher: ^6.3.2
+  ai_barcode_scanner: ^7.1.0
 
 dev_dependencies:
   flutter_test:

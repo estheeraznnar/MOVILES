@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:menu_dash/widgets/blur_container.dart';
+import 'package:menu_dash/widgets/fade_animation_widget.dart';
 import 'package:menu_dash/widgets/infotitle_widget.dart';
 
 class PersonajeDetalleScreens extends StatefulWidget {
@@ -42,33 +43,34 @@ class _PersonajeDetalleScreensState extends State<PersonajeDetalleScreens> {
           children: [
             Stack(
               children: [
-                Container(
-                  child: SizedBox(
-                    height: _alturaPantalla * 0.6,
-                    child: Hero(
-                      tag: widget.imagen,
-                      child: Image.asset('assets/${widget.imagen}.png'),
-                    ), //hay que poner la ruta porque sino no funcionara y dara error
-                  ),
+                SizedBox(
+                  height: _alturaPantalla * 0.6,
+                  child: Hero(
+                    tag: widget.imagen,
+                    child: Image.asset('assets/${widget.imagen}.png'),
+                  ), //hay que poner la ruta porque sino no funcionara y dara error
                 ),
                 Positioned(
                   bottom: 20,
                   left: 12,
-                  child: BlurContainer(
-                    child: Container(
-                      width: 160,
-                      height: 50,
-                      alignment: .center,
-                      decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.25),
-                        borderRadius: .circular(10),
-                      ),
-                      child: Text(
-                        widget.nombre,
-                        style: TextStyle(
-                          fontWeight: .bold,
-                          color: Colors.white,
-                          fontSize: 15,
+                  child: FadeAnimationWidget(
+                    intervalEnd: 0.6, //de cuanto quiero que sea la transicion y cuanto quiero que tarde en mostrarse
+                    child: BlurContainer( //esto me lleva a la clase blur container y lo que hace es como darle transparencia al bton
+                      child: Container(
+                        width: 160,
+                        height: 50,
+                        alignment: .center,
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.25),
+                          borderRadius: .circular(10),
+                        ),
+                        child: Text(
+                          widget.nombre,
+                          style: TextStyle(
+                            fontWeight: .bold,
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
                         ),
                       ),
                     ),
@@ -79,51 +81,63 @@ class _PersonajeDetalleScreensState extends State<PersonajeDetalleScreens> {
             SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: Text(
-                "Personaje: ${widget.nombre}",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: .bold,
+              child: FadeAnimationWidget(
+                intervalStart: 0.2,
+                child: Text(
+                  "Personaje: ${widget.nombre}",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: .bold,
+                  ),
                 ),
               ),
             ),
             SizedBox(height: 5),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: Text(
-                "One Piece",
-                style: TextStyle(color: Colors.white70, fontSize: 15),
+              child: FadeAnimationWidget(
+                intervalStart: 0.4,
+                child: Text(
+                  "One Piece",
+                  style: TextStyle(color: Colors.white70, fontSize: 15),
+                ),
               ),
             ),
             SizedBox(height: 50),
             Padding(
               padding: EdgeInsetsGeometry.symmetric(horizontal: 12),
-              child: Row(
-                mainAxisAlignment: .spaceBetween,
-                children: [
-                  InfoTitleWidget(titulo: "Eiichiró Oda", subTitulo: "Creador"),
-                  InfoTitleWidget(titulo: "Japón", subTitulo: "País"),
-                ],
+              child: FadeAnimationWidget(
+                intervalStart: 0.4,
+                child: Row(
+                  mainAxisAlignment: .spaceBetween,
+                  children: [
+                    InfoTitleWidget(titulo: "Eiichiró Oda", subTitulo: "Creador"),
+                    InfoTitleWidget(titulo: "Japón", subTitulo: "País"),
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 50),
             GestureDetector(
               onTap: () => Navigator.pop(context),
-              child: Container(
-                height: 50,
-                alignment: .center,
-                margin: EdgeInsets.symmetric(horizontal: 12),
-                decoration: BoxDecoration(
-                  color: widget.color.withValues(alpha: 0.6),
-                  borderRadius: .circular(10),
-                ),
-                child: Text(
-                  "Volver",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: .bold,
+              child: FadeAnimationWidget(
+                intervalStart: 0.6,
+                child: Container(
+                  height: 50,
+                  alignment: .center,
+                  margin: EdgeInsets.symmetric(horizontal: 12),
+                  decoration: BoxDecoration(
+                    color: widget.color.withValues(alpha: 0.6),
+                    borderRadius: .circular(10),
+                  ),
+                  child: Text(
+                    "Volver",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: .bold,
+                    ),
                   ),
                 ),
               ),
