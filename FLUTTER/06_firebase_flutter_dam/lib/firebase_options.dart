@@ -65,4 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'fire-flutter-7cfe7.firebasestorage.app',
     iosBundleId: 'com.example.firebaseFlutterDam',
   );
+
 }
