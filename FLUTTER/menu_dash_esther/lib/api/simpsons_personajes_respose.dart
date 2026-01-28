@@ -62,6 +62,8 @@ class Personaje {
         required this.phrases,
         required this.status,
     });
+    String get imageUrl =>
+      'https://cdn.thesimpsonsapi.com/500$portraitPath';
 
     factory Personaje.fromJson(Map<String, dynamic> json) => Personaje(
         id: json["id"],

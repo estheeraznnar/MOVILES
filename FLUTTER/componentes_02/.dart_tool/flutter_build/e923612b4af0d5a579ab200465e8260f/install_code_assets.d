@@ -1,0 +1,1 @@
+ C:\\_ESTHER_\\DAM2\\MOVILES\\MOVILES\\FLUTTER\\componentes_02\\.dart_tool\\flutter_build\\e923612b4af0d5a579ab200465e8260f\\native_assets.json: 
