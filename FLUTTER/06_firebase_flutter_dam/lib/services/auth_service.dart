@@ -85,8 +85,22 @@ class AuthService {
   Future<void> initSignIn() async{
     if(!isInitialize){
       await _googleSignIn.initialize(
-        serverClientId: 
+        serverClientId: '977425803362-3irqrpv3d3kgtmmd1dobe363tll4jkld.apps.googleusercontent.com'
       );
+      isInitialize = true;
+    }
+  }
+
+  //Iniciar sesion con google 7.2.0
+  Future<UserCredential?> loginConGoogle() async{
+    try {
+      initSignIn();
+      final GoogleSignInAccount googleUser =  await _googleSignIn.authenticate();
+
+      //si el usuario cancela
+      if(googleUser == null) return null;
+    } catch (e) {
+      
     }
   }
 
