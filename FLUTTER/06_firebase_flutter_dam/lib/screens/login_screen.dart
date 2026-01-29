@@ -1,3 +1,4 @@
+import 'package:firebase_flutter_dam/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -11,10 +12,46 @@ class _LoginScreenState extends State<LoginScreen> {
   String email = "";
   String pass = "";
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passController = TextEditingController();
-
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+
+  final _authService = AuthService();
+  bool _isLoding = false;
+
+  @override
+  void dispose(){
+    _emailController.dispose();
+    _passController.dispose();
+    super.dispose();
+  }
+//Para que el boton solo se pueda pulsar una vez o si hay un error nos muestre que error es
+  Future<void> _signIn() async{
+    //antes de setState hay que hacer esto, lo que compruebo es que los validadores esten correctos sino se sale de ahi
+    if(_formKey.currentState!.validate()) return;
+    setState(() => _isLoding = true);
+    try{
+      _authService.iniciarSesion(
+        email: _emailController.text.trim(), 
+        password: _passController.text
+      );
+      //no necesitamos navegar manualmente, el stream builder lo hace automaticamente
+    }catch(e){
+      //Mostramos el mensaje al usuario
+      if(mounted){
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(e.toString()),
+            backgroundColor: const Color.fromARGB(255, 255, 126, 126),
+          )
+        );
+      }
+    }finally{
+      if(mounted){
+        setState(() => _isLoding = false);
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +90,16 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontSize: 18,
                           ),
                         ),
+                        //compruebo que todos los validadores son correctos 
+                        validator: (value){
+                          if(value == null || value.isEmpty){
+                            return 'Porfavor ingrsa un correo';
+                          }
+                          if(value.contains('@')){
+                            return 'Porfavor ingrsa un correo';
+                          }
+                          return null;
+                        },
                       ),
                     ),
                     SizedBox(height: 30),
@@ -76,11 +123,20 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontSize: 18,
                           ),
                         ),
+                        validator: (value){
+                          if(value == null || value.isEmpty){
+                            return 'Porfavor ingrsa una contraseña';
+                          }
+                          if(value.length<6){ //Se pueden meter mas caracteres requeridos
+                            return 'La contraseña debe de tener almenos 6 caracteres';
+                          }
+                          return null;
+                        },
                       ),
                     ),
                     SizedBox(height: 30),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: _isLoding ? null : _signIn,
                       child: Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.symmetric(
