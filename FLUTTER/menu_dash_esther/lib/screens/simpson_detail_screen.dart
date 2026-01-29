@@ -76,7 +76,7 @@ class _SimpsonDetailScreenState extends State<SimpsonDetailScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12),
               child: FadeAnimationWidget(
-                intervalStart: 0.4,
+                intervalStart: 0.4, //Le pogo que vaya apareciendo poco a poco
                 child: Text(
                   "Edad: ${widget.personaje.age}",
                   style: TextStyle(color: const Color.fromARGB(179, 0, 0, 0), fontSize: 15),
