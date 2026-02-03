@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '977425803362',
     projectId: 'fire-flutter-7cfe7',
     storageBucket: 'fire-flutter-7cfe7.firebasestorage.app',
+    androidClientId: '977425803362-3irqrpv3d3kgtmmd1dobe363tll4jkld.apps.googleusercontent.com',
+    iosClientId: '977425803362-fadtmsavrrd4di4pjen5tdtjb3qmva0q.apps.googleusercontent.com',
     iosBundleId: 'com.example.firebaseFlutterDam',
   );
 

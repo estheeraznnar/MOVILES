@@ -44,8 +44,18 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: .center,
           children: [
+            //Foto de perfil si existe
+            user?.photoURL != null ? CircleAvatar(
+              radius: 50,
+              backgroundImage: NetworkImage(user!.photoURL!),
+            ) : 
             Icon(Icons.check_circle_outline, size: 100, color: Colors.green,),
             SizedBox(height: 24,),
+            //Nombre si existe
+            if(user?.displayName != null) Text(
+              user!.displayName!,
+              style: TextStyle(fontSize: 22, fontWeight: .w200),
+            ),
             Text(
               'Sesión Iniciada correctamente', 
               style: TextStyle(
@@ -69,6 +79,10 @@ class HomeScreen extends StatelessWidget {
                 color: const Color.fromARGB(255, 110, 110, 110)
               ),
             ),
+            SizedBox(height: 24,),
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, '/lista_tareas');
+            }, child: Text('Ir a Tareas')),
           ],
         ),
       ),

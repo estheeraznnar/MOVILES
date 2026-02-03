@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_flutter_dam/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -50,6 +51,22 @@ class _LoginScreenState extends State<LoginScreen> {
       if(mounted){
         setState(() => _isLoding = false);
       }
+    }
+  }
+
+  Future<void> _logueoConGoogle() async{
+    setState(() => _isLoding = true);
+    try {
+      final UserCredential = await _authService.loginConGoogle();
+      if (UserCredential != null) {
+        //Aqui nuestro stream lo detectara automaticametne y ya pasaremos a nuestra pagina de home
+        print('Usuario logueado con google correctamente');
+      }
+    } catch (e) {
+      throw FirebaseAuthException(code: 'Error con google');
+    }
+    finally{
+      setState(() => _isLoding = false);
     }
   }
 
@@ -185,7 +202,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: .center,
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: _isLoding ? null: _logueoConGoogle,
                           child: Image.asset(
                             'assets/google.png',
                             height: 45,

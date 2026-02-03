@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_flutter_dam/screens/add_tarea_screen.dart';
 import 'package:firebase_flutter_dam/screens/home_screen.dart';
 import 'package:firebase_flutter_dam/screens/login_screen.dart';
 import 'package:firebase_flutter_dam/screens/register_screen.dart';
+import 'package:firebase_flutter_dam/screens/tareas_screen.dart';
 import 'package:firebase_flutter_dam/seleccionar_pantalla_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -41,6 +43,8 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/register': (context) => RegisterScreen(),
         '/home': (context) => HomeScreen(),
+        '/lista_tareas': (context) => TareasScreen(),
+        '/add_tarea': (context) => AddTareaScreen(),
       },
     );
   }
