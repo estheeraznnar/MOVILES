@@ -83,6 +83,10 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(onPressed: (){
               Navigator.pushNamed(context, '/lista_tareas');
             }, child: Text('Ir a Tareas')),
+            SizedBox(height: 24,),
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, '/storage');
+            }, child: Text('Firebase Storage')),
           ],
         ),
       ),
