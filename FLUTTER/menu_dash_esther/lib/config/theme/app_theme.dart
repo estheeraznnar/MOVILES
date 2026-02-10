@@ -1,5 +1,6 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static const listaColores = [
@@ -14,4 +15,16 @@ class AppTheme {
     Colors.deepOrangeAccent,
     Colors.cyanAccent
   ];
+
+  //Texto para mi app ponerle estilo a todos los textos el mismo  
+  ThemeData getTheme() => ThemeData(
+    textTheme: TextTheme(
+      titleLarge: GoogleFonts.montserratAlternates(),
+      titleMedium: GoogleFonts.montserratAlternates(fontSize: 30),
+      titleSmall: GoogleFonts.montserratAlternates(fontSize: 25),
+      bodyLarge: GoogleFonts.montserratAlternates(),
+      bodyMedium: GoogleFonts.montserratAlternates(),
+      bodySmall: GoogleFonts.montserratAlternates(),
+    )
+  );
 }

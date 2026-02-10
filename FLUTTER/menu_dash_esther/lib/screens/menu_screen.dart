@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:menu_dash/config/menu/menu_items.dart';
+import 'package:menu_dash/config/preferences/preferencias.dart';
 import 'package:menu_dash/widgets/menu_item.dart';
 import 'package:menu_dash/widgets/option_menu_item.dart';
 
@@ -13,7 +14,7 @@ class MenuScreen extends StatelessWidget {
     final List<OptionMenuItem> _listaOpcionesMenu = MenuItems().listOptionMenuItem;
 
     return Scaffold(
-      //appBar: AppBar(title: Text('Menu Esther'),), 
+      appBar: AppBar(title: Text('Bienvenido ' + Preferencias.nombre),), 
       body: Padding( //pone bordes
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(

@@ -45,16 +45,16 @@ class MenuItems {
     
     OptionMenuItem(
       color: AppTheme.listaColores[6], 
-      iconData: Icons.snowmobile, 
-      texto: 'Opcion 7', 
-      screenName: 'opcion 7',
+      iconData: Icons.settings, 
+      texto: 'Settings', 
+      screenName: 'settings',
     ),
     
     OptionMenuItem(
       color: AppTheme.listaColores[7], 
-      iconData: Icons.move_to_inbox_outlined, 
-      texto: 'Opcion 8', 
-      screenName: 'opcion 8',
+      iconData: Icons.location_on_rounded, 
+      texto: 'Mapas', 
+      screenName: 'mapas',
     ),
     
 
