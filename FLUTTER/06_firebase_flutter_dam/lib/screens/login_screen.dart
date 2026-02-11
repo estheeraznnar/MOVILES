@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_flutter_dam/services/auth_service.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -79,7 +80,11 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              child: Image.asset("assets/car.PNG", fit: BoxFit.cover),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Lottie.asset('assets/login.json'),
+              ),
+              //child: Image.asset("assets/car.PNG", fit: BoxFit.cover),
             ),
             SizedBox(height: 30),
             Padding(

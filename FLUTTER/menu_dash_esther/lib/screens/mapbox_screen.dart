@@ -29,6 +29,7 @@ class MapboxScreen extends StatelessWidget {
     }
 
     return Scaffold(
+      
       appBar: AppBar(title: Text('MapBoxScreen'),), 
       body: MapWidget(
         styleUri: MapboxStyles.STANDARD,
