@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "865396459051",
+    "project_id": "p1-login-repaso",
+    "storage_bucket": "p1-login-repaso.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865396459051:android:e45fc7fb7e08df20200c6e",
+        "android_client_info": {
+          "package_name": "com.example.practica_liging_estudio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKc9YjhYmUV4dJXYZ-Emoxrzu9207BX44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

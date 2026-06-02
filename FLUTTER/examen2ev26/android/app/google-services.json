@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "990906170937",
+    "project_id": "examen-esther-7e5dd",
+    "storage_bucket": "examen-esther-7e5dd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990906170937:android:4b026796f95b8079b117e8",
+        "android_client_info": {
+          "package_name": "org.iesch.examen2evflutter.examen2ev26"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDByz62_uc_-SQujYO3yHb9VbUTMFDt8Bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

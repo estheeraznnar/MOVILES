@@ -1,0 +1,15 @@
+Coloca aquí las dos imágenes del examen con estos nombres EXACTOS:
+
+  - icon.png    -> imagen para el ICONO de la app
+  - splash.png  -> imagen para la SPLASH SCREEN
+
+Recomendado:
+  - icon.png   : cuadrada (p. ej. 1024x1024), sin transparencia para iOS.
+  - splash.png : logo centrado con fondo transparente (se verá sobre el azul).
+
+Después ejecuta en la terminal:
+  flutter pub get
+  dart run flutter_launcher_icons
+  dart run flutter_native_splash:create
+
+(Este archivo LEEME.txt puedes borrarlo cuando ya tengas las imágenes.)
