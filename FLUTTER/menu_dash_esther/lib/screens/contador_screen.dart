@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:menu_dash/pages/marcador_page.dart';
 import 'package:menu_dash/pages/resultado_page.dart';
 
+//Guarda qué pestaña está activa en _currentIndex, y cada setState() hace que cambie la página visible. 
+//StatefulWidget se usa justamente cuando la UI depende de un estado que cambia.
+//muestra MarcadorPage y ResultadoPage
+// Pantalla contenedora que alterna entre MarcadorPage y ResultadoPage
+// Usa BottomNavigationBar y estado local con _currentIndex
+
 class ContadorScreen extends StatefulWidget {
   const ContadorScreen({Key? key}) : super(key: key);
 

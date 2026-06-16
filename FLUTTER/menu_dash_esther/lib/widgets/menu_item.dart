@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:menu_dash/widgets/option_menu_item.dart';
 
+//widget visual que recibe un OptionMenuItem 
+//Tarjeta visual del menu principal
+//Usa los datos de una opcion y navega a su ruta al pulsar
 class MenuItem extends StatelessWidget {
   const MenuItem({
     super.key,

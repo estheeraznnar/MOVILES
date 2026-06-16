@@ -3,6 +3,9 @@ import 'package:menu_dash/sevices/api_service.dart';
 import '../models/dogs_response.dart';
 import '../widgets/dog_card.dart';
 
+// Pantalla que busca imágenes de perros por raza
+// Gestiona entrada del usuario, carga, errores y resultados
+
 class RazasApiScreen extends StatefulWidget {
   const RazasApiScreen({Key? key}) : super(key: key);
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//Es un pequeño widget reutilizable de texto doble: título y subtítulo.
+//Es un pequeño widget reutilizable de texto doble: título y subtítulo.
 class InfoTitleWidget extends StatelessWidget {
   const InfoTitleWidget({super.key, required this.titulo, required this.subTitulo});
 

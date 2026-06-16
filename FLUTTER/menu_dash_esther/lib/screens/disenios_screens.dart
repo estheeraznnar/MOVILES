@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:menu_dash/widgets/header_widget.dart';
 import 'package:menu_dash/widgets/lista_personajes_widgets.dart';
 
+
+//Solo junta HeaderWidget y ListaPersonajesWidget
+// Pantalla principal del módulo de diseños
+// Compone la cabecera y la lista de personajes
+
 class DiseniosScreens extends StatelessWidget {
    
   const DiseniosScreens({Key? key}) : super(key: key);

@@ -1,0 +1,26 @@
+Flujo menu principal:
+    OptionMenuItem define la estructura de cada opción.
+    MenuItems crea la lista.
+    MenuScreen recorre esa lista.
+    MenuItem pinta cada tarjeta.
+    Navigator.pushNamed abre la pantalla correspondiente.
+
+Flujo de una API, como Simpsons o perros:
+    La pantalla pide datos.
+    El servicio hace la petición HTTP.
+    El modelo transforma el JSON.
+    La pantalla muestra carga/error/datos.
+    Un widget pequeño pinta cada elemento si hace falta.
+
+
+Aquí está la relación más importante de la app:
+    main.dart dice qué rutas existen.
+    OptionMenuItem guarda el nombre de cada ruta.
+    MenuScreen recorre las opciones.
+    MenuItem usa pushNamed para abrir la ruta.
+
+En lenguaje simple:
+    main.dart es el mapa;
+    OptionMenuItem guarda una dirección;
+    MenuItem lee esa dirección;
+    MenuScreen enseña todas las puertas.

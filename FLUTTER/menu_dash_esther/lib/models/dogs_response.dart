@@ -1,5 +1,8 @@
 // Modelo de datos para la respuesta de la API
 // Equivalente a DogsResponse.kt
+
+// Servicio encargado de llamar a la API de perros
+// Construye la URL, hace la petición y transforma el JSON en modelo
 class DogsResponse {
   final String status;
   final List<String> images;

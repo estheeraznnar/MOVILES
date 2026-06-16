@@ -3,9 +3,12 @@ import 'package:menu_dash/api/simpsons_personajes_respose.dart';
 import 'package:menu_dash/widgets/blur_container.dart';
 import 'package:menu_dash/widgets/fade_animation_widget.dart';
 
+// Pantalla de detalle de un personaje Simpsons
+// Muestra los datos del personaje recibido por navegación
+//la abre SimpsonsScreen y usa BlurnContainer y FadeAnimationWidget
 class SimpsonDetailScreen extends StatefulWidget {
-  final Personaje personaje;
-  const SimpsonDetailScreen({super.key, required this.personaje});
+  final Personaje personaje; // El personaje llega desde la pantalla anterior mediante navegación
+  const SimpsonDetailScreen({super.key, required this.personaje}); //constructor que obliga a recibir un personaje para poder mostrar la pantalla
 
   @override
   State<SimpsonDetailScreen> createState() => _SimpsonDetailScreenState();
@@ -16,16 +19,17 @@ class _SimpsonDetailScreenState extends State<SimpsonDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.personaje.name),
+        title: Text(widget.personaje.name), //uso el nombre del personake como titulo
         titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
         backgroundColor: const Color(0xFF6750a1),
       ),
       backgroundColor: const Color.fromARGB(255, 255, 228, 129),
-      body: SingleChildScrollView(
+      body: SingleChildScrollView( // permito hacer scroll vertical si el contenido no cabe completo
         padding: const EdgeInsets.all(16),
-        child: Column(
+        child: Column( // Muestro información básica del personaje: trabajo, edad y frases
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // imagen principal del personaje mostrada en grande
             Image.network(widget.personaje.imageUrl, height: 250),
             const SizedBox(height: 16),
             Positioned(
@@ -99,12 +103,13 @@ class _SimpsonDetailScreenState extends State<SimpsonDetailScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 12),
               child: FadeAnimationWidget(
                 intervalStart: 0.6,
+                //Lista de frases celebres asociadas al personaje
                 child: ListView.builder(
                   itemCount: widget.personaje.phrases.length,
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemBuilder: (context, index) {
-                    final frase = widget.personaje.phrases[index];
+                  itemBuilder: (context, index) { //construyo una fila por frase
+                    final frase = widget.personaje.phrases[index]; //accedo a la frase actual usando su indice dentro de la lista
                     return SizedBox(
                       child: ListTile(
                         title: Text(frase),

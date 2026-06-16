@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
+// Tarjeta reutilizable para mostrar una imagen remota de perro
+// Incluye placeholder mientras carga y widget de error si falla
+
 class DogCard extends StatelessWidget {
   final String imageUrl;
 

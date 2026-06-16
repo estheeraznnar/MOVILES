@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 
-
+// Pantalla que carga usuarios desde una API
+// Usa FutureBuilder para pintar carga, error o lista final
 class JsonPlaceHolderAPIServide {
 
   //Metodo para obtener lista de usuarios mediante http

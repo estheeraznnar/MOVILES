@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:menu_dash/sevices/jsonplaceholder_service.dart';
 
+// Servicio de ejemplo para cargar usuarios desde JSONPlaceholder
+// Incluye una versión con http y otra con dio
 class ApiJsonPlaceUsersScreen extends StatefulWidget {
    
   const ApiJsonPlaceUsersScreen({Key? key}) : super(key: key);

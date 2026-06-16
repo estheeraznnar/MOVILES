@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:menu_dash/config/preferences/preferencias.dart';
 
+// Pantalla de ajustes de usuario
+// Lee y guarda valores persistentes usando la clase Preferencias
+
 class SettingsScreen extends StatefulWidget {
    
   const SettingsScreen({Key? key}) : super(key: key);

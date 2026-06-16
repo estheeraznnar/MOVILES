@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//Modelo que representa una opcion del menu principal
+//Guarda el color, icono, texto y ruta de navegacion
 class OptionMenuItem {
 
   final Color color;

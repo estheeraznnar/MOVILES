@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:menu_dash/screens/personaje_detalle_screens.dart';
 
+//tiene dos partes la fila superior con miniaturas y los bloques inferiores clicables
+//Usa Expanded porque está metido dentro de un Column, y así ocupa el resto del espacio disponible.
+//lo usa DiseniosScreens, navefa a PersonajeDetalleScreens y usa Hero para transicion de imagen
+// Lista visual de personajes
+// Construye miniaturas superiores y bloques clicables inferiores
+
 class ListaPersonajesWidget extends StatefulWidget {
   const ListaPersonajesWidget({super.key});
 

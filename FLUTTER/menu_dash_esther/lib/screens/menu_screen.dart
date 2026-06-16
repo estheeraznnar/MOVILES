@@ -4,13 +4,17 @@ import 'package:menu_dash/config/preferences/preferencias.dart';
 import 'package:menu_dash/widgets/menu_item.dart';
 import 'package:menu_dash/widgets/option_menu_item.dart';
 
+// pantalla principal del menú o home
+// Pide la lista a MenuItems().listOptionMenuItem y la muestra con GridView.builder
+// Recorre la lista de opciones y crea una cuadrícula navegable
+
 class MenuScreen extends StatelessWidget {
    
   const MenuScreen({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
-
+    //uso OptionMenuItem como modelo y MenuItem para dibujar cada tarjeta
     final List<OptionMenuItem> _listaOpcionesMenu = MenuItems().listOptionMenuItem;
 
     return Scaffold(

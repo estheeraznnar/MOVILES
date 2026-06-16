@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 //Esto es la transion que hacen los elementos de ir poco a poco cuando le pulsas
+//permiten hacer efectos sin crear un AnimationController manual
+//intervalStart e intervalEnd están declarados pero aquí mismo no se usan realmente.
+// Widget reutilizable que hace aparecer un hijo con una animación de opacidad
 class FadeAnimationWidget extends StatelessWidget {
   const FadeAnimationWidget({
     super.key, 

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mapbox_maps_flutter/mapbox_maps_flutter.dart';
 
+// Pantalla que muestra un mapa Mapbox
+// Al crearse el mapa, anima la cámara hacia una ubicación concreta
+
 class MapboxScreen extends StatelessWidget {
    
   const MapboxScreen({Key? key}) : super(key: key);

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// Cabecera visual de la sección Diseños
+
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key});
 

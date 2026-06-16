@@ -3,6 +3,12 @@ import 'package:menu_dash/widgets/blur_container.dart';
 import 'package:menu_dash/widgets/fade_animation_widget.dart';
 import 'package:menu_dash/widgets/infotitle_widget.dart';
 
+/*Es la pantalla de detalle del módulo visual. Recibe color, imagen y nombre por constructor y 
+monta una pantalla muy decorada con gradiente, Hero, blur y animaciones. 
+El widget Hero enlaza visualmente el mismo elemento entre dos pantallas si comparten el mismo tag.*/
+//la abre LisataPersonaesWidget y usa BlurContainer, FadeAnimationWidget y InfoTitleWidget
+// Pantalla de detalle del personaje seleccionado
+// Recibe datos por constructor y usa Hero para la transición visual
 class PersonajeDetalleScreens extends StatefulWidget {
   const PersonajeDetalleScreens({
     Key? key,
